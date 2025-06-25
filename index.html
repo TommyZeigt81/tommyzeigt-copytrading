@@ -1,142 +1,110 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TommyZeigt Copytrading</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #fafafa, #eaeaea);
+      background: linear-gradient(to bottom, #f8f8f8, #eaeaea);
       color: #111;
       scroll-behavior: smooth;
     }
-    header {
-      padding: 80px 20px 60px;
-      text-align: center;
-      background: radial-gradient(circle at center, #fffde7, #f9f3c2);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    h1 {
-      font-size: 3rem;
-      color: #c59d00;
-    }
-    h2 {
-      color: #c59d00;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #333;
-    }
     nav {
       background: #fff;
-      padding: 10px 20px;
+      padding: 15px 30px;
       position: sticky;
       top: 0;
+      z-index: 1000;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #ccc;
-      z-index: 10;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      align-items: center;
+      border-bottom: 1px solid #ddd;
     }
     nav img {
       height: 40px;
     }
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 30px;
+      gap: 25px;
     }
     nav a {
-      color: #c59d00;
+      color: #d4af37;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.2s;
     }
     nav a:hover {
-      color: #e6b800;
+      color: #bfa134;
+    }
+    header {
+      background: url('https://dummyimage.com/1600x500/f8f8f8/111&text=TommyZeigt+Copytrading') center/cover no-repeat;
+      padding: 140px 20px 100px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #111;
+    }
+    header p {
+      font-size: 1.4rem;
+      margin-top: 20px;
+      color: #444;
+    }
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .buttons a {
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      background: #d4af37;
+      color: #fff;
+      transition: 0.3s;
+    }
+    .buttons a:hover {
+      background: #bfa134;
     }
     section {
       padding: 80px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    .buttons {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    section h2 {
+      font-size: 2rem;
+      color: #d4af37;
+      margin-bottom: 20px;
     }
-    .buttons a {
-      text-decoration: none;
-      background: #ffd700;
-      color: #000;
-      padding: 14px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: 0.3s;
-    }
-    .buttons a:hover {
-      background: #f0c400;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin-top: 20px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: auto;
-    }
-    input, textarea {
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background: #ffd700;
-      color: #000;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
+    section p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.6;
     }
     footer {
+      background: #fff;
       text-align: center;
       padding: 40px 20px;
-      color: #666;
-    }
-    .ergebnis-img {
-      width: 100%;
-      max-width: 300px;
-      display: block;
-      margin: 20px auto;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#hero">
-      <img src="TZ logo.png" alt="TommyZeigt Logo">
-    </a>
+    <img src="TZ logo.png" alt="Logo" />
     <div class="nav-links">
       <a href="#hero">Start</a>
-      <a href="#ergebnisse">Ergebnisse</a>
       <a href="#vorteile">Vorteile</a>
       <a href="#community">Community</a>
       <a href="#shop">Shop</a>
@@ -146,65 +114,44 @@
 
   <header id="hero">
     <h1>Dein Weg zum Erfolg – TommyZeigt Copytrading</h1>
-    <p>Starte jetzt mit echter Unterstützung, starker Community und klarer Vision.</p>
+    <p>Starte dein Trading mit Klarheit, Strategie und Community.</p>
     <div class="buttons">
-      <a href="https://t.me/TommY" target="_blank">Komm in meine Telegram-Gruppe</a>
-      <a href="https://www.instagram.com/tommyzeigtofficial" target="_blank">Instagram ansehen</a>
+      <a href="https://t.me/TommY" target="_blank">Telegram beitreten</a>
+      <a href="https://www.instagram.com/tommyzeigtofficial" target="_blank">Instagram folgen</a>
     </div>
   </header>
 
-  <section id="uebermich">
-    <h2>👋 Über TommyZeigt</h2>
-    <p>Ich bin Tommy, leidenschaftlicher Trader und Community-Builder. Mein Ziel: Copytrading für alle zugänglich machen – transparent, einfach, profitabel. Lass uns gemeinsam durchstarten!</p>
-  </section>
-
   <section id="vorteile">
-    <h2>🚀 Vorteile vom Copytrading</h2>
-    <p>🔒 Kein Stress, kein Fachwissen nötig – du kopierst einfach meine Trades</p>
-    <p>⏱ Spare Zeit und nutze meine Erfahrung im Goldmarkt</p>
-    <p>📈 Volle Transparenz, 24/7 Kontrolle</p>
-  </section>
-
-  <section id="ergebnisse">
-    <h2>📈 Ergebnisse</h2>
-    <p>Konstante Gewinne durch strategisches Copytrading. Hier siehst du echte Auszüge aus realen Ergebnissen.</p>
-    <img src="ergebnisse-zwei.jpg" alt="Ergebnis 1" class="ergebnis-img">
-    <img src="neue-ergebnisse.jpg" alt="Ergebnis 2" class="ergebnis-img">
-    <img src="trading-ergebnisse-zwei.jpg" alt="Ergebnis 3" class="ergebnis-img">
+    <h2>🚀 Vorteile</h2>
+    <p>✔ Kein Fachwissen nötig – kopiere meine erfolgreichen Trades</p>
+    <p>✔ Spare Zeit und nutze meine Erfahrung im Goldmarkt</p>
+    <p>✔ Transparent, effizient, einfach</p>
   </section>
 
   <section id="community">
     <h2>🤝 Community</h2>
-    <p>Werde Teil der TommyZeigt-Community – exklusive Insights, Live-Trading & Support. Gemeinsam wachsen!</p>
-    <img src="https://dummyimage.com/800x400/ccc/000&text=Community+Screenshot" alt="Community" style="width:100%; margin-top:20px;">
+    <p>Werde Teil der TommyZeigt-Community – tägliche Insights, Live-Setups und ehrlicher Austausch unter Tradern.</p>
+    <img src="https://dummyimage.com/900x400/cfcfcf/111&text=Community+Einblick" alt="Community Vorschau" style="width:100%; margin-top:20px; border-radius: 8px;">
   </section>
 
   <section id="shop">
-    <h2>🛙 Shop</h2>
-    <p>Demnächst verfügbar: exklusive TommyZeigt-Produkte, Merch und Tools für Trader!</p>
-    <img src="https://dummyimage.com/800x300/ccc/000&text=Shop+Coming+Soon" alt="Shop Vorschau" style="width:100%; margin-top:20px;">
+    <h2>🛍 Shop</h2>
+    <p>Exklusive Trading-Produkte & TommyZeigt-Merch – bald verfügbar!</p>
+    <img src="https://dummyimage.com/900x300/dedede/111&text=Shop+Coming+Soon" alt="Shop Vorschau" style="width:100%; margin-top:20px; border-radius: 8px;">
   </section>
 
   <section id="kontakt">
     <h2>📬 Kontakt</h2>
-    <form action="mailto:deine@email.de" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Dein Name" required>
-      <input type="email" name="email" placeholder="Deine E-Mail" required>
+    <form action="mailto:deine@email.de" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:15px; max-width:500px; margin:auto;">
+      <input type="text" name="name" placeholder="Dein Name" required />
+      <input type="email" name="email" placeholder="Deine E-Mail" required />
       <textarea name="message" rows="5" placeholder="Deine Nachricht..."></textarea>
       <button type="submit">Absenden</button>
     </form>
-    <div class="buttons" style="margin-top:40px;">
-      <a href="https://t.me/TommY" target="_blank">Komm in meine Telegram-Gruppe</a>
-    </div>
-  </section>
-
-  <section id="goldchart">
-    <h2>📉 Live Gold-Chart</h2>
-    <iframe src="https://www.tradingview.com/embed-widget/symbol-overview/?locale=de#%7B%22symbols%22%3A%5B%5B%22OANDA%3AXAUUSD%7C1D%22%5D%5D%7D"></iframe>
   </section>
 
   <footer>
-    &copy; 2025 TommyZeigt Copytrading
+    &copy; 2025 TommyZeigt – Gemeinsam erfolgreich traden
   </footer>
 </body>
 </html>
