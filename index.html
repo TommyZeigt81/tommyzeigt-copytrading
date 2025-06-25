@@ -36,12 +36,18 @@
       top: 0;
       display: flex;
       align-items: center;
-      gap: 30px;
+      justify-content: space-between;
+      flex-wrap: wrap;
       border-bottom: 1px solid #333;
       z-index: 10;
     }
     nav img {
       height: 40px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
     }
     nav a {
       color: gold;
@@ -109,9 +115,10 @@
       color: #666;
     }
     .ergebnis-img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 20px;
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 20px auto;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
@@ -122,11 +129,14 @@
     <a href="#hero">
       <img src="TZ logo.png" alt="TommyZeigt Logo">
     </a>
-    <a href="#ergebnisse">Ergebnisse</a>
-    <a href="#vorteile">Vorteile</a>
-    <a href="#community">Community</a>
-    <a href="#shop">Shop</a>
-    <a href="#kontakt">Kontakt</a>
+    <div class="nav-links">
+      <a href="#hero">Start</a>
+      <a href="#ergebnisse">Ergebnisse</a>
+      <a href="#vorteile">Vorteile</a>
+      <a href="#community">Community</a>
+      <a href="#shop">Shop</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
   </nav>
 
   <header id="hero">
@@ -155,7 +165,7 @@
     <h2>🚀 Vorteile vom Copytrading</h2>
     <p>🔒 Kein Stress, kein Fachwissen nötig – du kopierst einfach meine Trades</p>
     <p>⏱ Spare Zeit und nutze meine Erfahrung im Goldmarkt</p>
-    <p>📊 Volle Transparenz, 24/7 Kontrolle</p>
+    <p>📈 Volle Transparenz, 24/7 Kontrolle</p>
   </section>
 
   <section id="community">
@@ -165,7 +175,7 @@
   </section>
 
   <section id="shop">
-    <h2>🛍️ Shop</h2>
+    <h2>🛙 Shop</h2>
     <p>Demnächst verfügbar: exklusive TommyZeigt-Produkte, Merch und Tools für Trader!</p>
     <img src="https://dummyimage.com/800x300/111/fff&text=Shop+Coming+Soon" alt="Shop Vorschau" style="width:100%; margin-top:20px;">
   </section>
