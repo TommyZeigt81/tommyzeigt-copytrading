@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TommyZeigt Copytrading</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #f8f8f8, #eaeaea);
-      color: #111;
+      background: #fdfdfd;
+      color: #1a1a1a;
       scroll-behavior: smooth;
     }
     nav {
       background: #fff;
-      padding: 15px 30px;
+      padding: 10px 30px;
       position: sticky;
       top: 0;
-      z-index: 1000;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #ddd;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      z-index: 10;
     }
     nav img {
       height: 40px;
@@ -36,73 +32,76 @@
       gap: 25px;
     }
     nav a {
-      color: #d4af37;
+      color: #d4aa00;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1rem;
     }
     nav a:hover {
-      color: #bfa134;
+      color: #b38f00;
     }
     header {
-      background: url('https://dummyimage.com/1600x500/f8f8f8/111&text=TommyZeigt+Copytrading') center/cover no-repeat;
-      padding: 140px 20px 100px;
+      background: linear-gradient(to right, #fff8e1, #ffffff);
       text-align: center;
+      padding: 100px 20px 80px;
     }
     header h1 {
-      font-size: 3rem;
-      color: #111;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #222;
     }
     header p {
-      font-size: 1.4rem;
-      margin-top: 20px;
+      font-size: 1.2rem;
+      margin-top: 10px;
       color: #444;
     }
     .buttons {
       margin-top: 40px;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 20px;
+      flex-wrap: wrap;
     }
     .buttons a {
-      padding: 14px 28px;
+      text-decoration: none;
+      background: #d4aa00;
+      color: white;
+      padding: 14px 24px;
       border-radius: 8px;
       font-weight: bold;
-      text-decoration: none;
-      background: #d4af37;
-      color: #fff;
-      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s;
     }
     .buttons a:hover {
-      background: #bfa134;
+      background: #b38f00;
     }
     section {
       padding: 80px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    section h2 {
+    h2 {
       font-size: 2rem;
-      color: #d4af37;
+      color: #222;
       margin-bottom: 20px;
     }
-    section p {
+    p {
       font-size: 1.1rem;
-      color: #333;
       line-height: 1.6;
+      color: #333;
     }
     footer {
-      background: #fff;
       text-align: center;
       padding: 40px 20px;
+      background: #f8f8f8;
+      color: #777;
       font-size: 0.9rem;
-      color: #888;
     }
   </style>
 </head>
 <body>
   <nav>
-    <img src="TZ logo.png" alt="Logo" />
+    <a href="#hero"><img src="TZ logo.png" alt="TommyZeigt Logo"></a>
     <div class="nav-links">
       <a href="#hero">Start</a>
       <a href="#vorteile">Vorteile</a>
@@ -123,35 +122,35 @@
 
   <section id="vorteile">
     <h2>🚀 Vorteile</h2>
-    <p>✔ Kein Fachwissen nötig – kopiere meine erfolgreichen Trades</p>
-    <p>✔ Spare Zeit und nutze meine Erfahrung im Goldmarkt</p>
-    <p>✔ Transparent, effizient, einfach</p>
+    <p>✓ Kein Fachwissen nötig – kopiere meine erfolgreichen Trades</p>
+    <p>✓ Spare Zeit und nutze meine Erfahrung im Goldmarkt</p>
+    <p>✓ Transparent, effizient, einfach</p>
   </section>
 
   <section id="community">
     <h2>🤝 Community</h2>
-    <p>Werde Teil der TommyZeigt-Community – tägliche Insights, Live-Setups und ehrlicher Austausch unter Tradern.</p>
-    <img src="https://dummyimage.com/900x400/cfcfcf/111&text=Community+Einblick" alt="Community Vorschau" style="width:100%; margin-top:20px; border-radius: 8px;">
+    <p>Werde Teil der TommyZeigt-Community – mit exklusiven Insights, Live-Trading und echtem Support. Gemeinsam wachsen!</p>
+    <img src="https://dummyimage.com/800x400/ddd/333&text=Community+Vorschau" style="width:100%; margin-top:20px;">
   </section>
 
   <section id="shop">
-    <h2>🛍 Shop</h2>
-    <p>Exklusive Trading-Produkte & TommyZeigt-Merch – bald verfügbar!</p>
-    <img src="https://dummyimage.com/900x300/dedede/111&text=Shop+Coming+Soon" alt="Shop Vorschau" style="width:100%; margin-top:20px; border-radius: 8px;">
+    <h2>🛍️ Shop</h2>
+    <p>Demnächst erhältlich: Premium-Produkte, Trading-Merch & mehr.</p>
+    <img src="https://dummyimage.com/800x300/ccc/000&text=Shop+Coming+Soon" style="width:100%; margin-top:20px;">
   </section>
 
   <section id="kontakt">
     <h2>📬 Kontakt</h2>
-    <form action="mailto:deine@email.de" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:15px; max-width:500px; margin:auto;">
-      <input type="text" name="name" placeholder="Dein Name" required />
-      <input type="email" name="email" placeholder="Deine E-Mail" required />
+    <form action="mailto:deine@email.de" method="post" enctype="text/plain" style="max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px;">
+      <input type="text" name="name" placeholder="Dein Name" required>
+      <input type="email" name="email" placeholder="Deine E-Mail" required>
       <textarea name="message" rows="5" placeholder="Deine Nachricht..."></textarea>
       <button type="submit">Absenden</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 TommyZeigt – Gemeinsam erfolgreich traden
+    &copy; 2025 TommyZeigt Copytrading
   </footer>
 </body>
 </html>
