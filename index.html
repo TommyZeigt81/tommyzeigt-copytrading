@@ -9,7 +9,7 @@
       body {
         font-family: 'Inter', sans-serif;
         margin: 0;
-        background: #0d0d0d;
+        background: #0f0f0f;
         color: #fff;
       }
       header {
@@ -17,14 +17,17 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 40px;
+        background: #0f0f0f;
         border-bottom: 1px solid #222;
-        background: #000;
       }
       nav a {
         margin-left: 20px;
         text-decoration: none;
-        color: #f5c518;
+        color: #ccc;
         font-weight: 600;
+      }
+      nav a:hover {
+        color: #f5c518;
       }
       section {
         padding: 80px 40px;
@@ -38,7 +41,7 @@
       }
       .hero {
         text-align: center;
-        padding-top: 120px;
+        padding-top: 100px;
         padding-bottom: 100px;
         background: #1a1a1a;
       }
@@ -52,7 +55,7 @@
       .hero p {
         font-size: 20px;
         margin-top: 20px;
-        color: #ddd;
+        color: #ccc;
       }
       .button {
         display: inline-block;
@@ -67,15 +70,14 @@
       .grid, .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
+        gap: 20px;
       }
       .card {
-        background: #1a1a1a;
+        background: #1f1f1f;
         padding: 20px;
         border-radius: 10px;
         text-align: center;
-        box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
-        border: 1px solid #333;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       }
       .card h3 {
         margin-bottom: 10px;
@@ -84,20 +86,20 @@
       }
       .card p {
         font-size: 16px;
-        color: #ccc;
+        color: #aaa;
       }
       footer {
         text-align: center;
         font-size: 14px;
         padding: 60px 20px;
-        color: #666;
-        background: #000;
+        color: #777;
+        background: #111;
       }
     </style>
   </head>
   <body>
     <header>
-      <div><img src="img/TZ logo.png" alt="TommyZeigt Logo" style="height:40px; vertical-align:middle;"> <strong style="color:#f5c518;">TommyZeigt</strong></div>
+      <div><img src="img/TZ logo.png" alt="TommyZeigt Logo" style="height:40px; vertical-align:middle;"> <strong style="color: #f5c518">TommyZeigt</strong></div>
       <nav>
         <a href="#start">Start</a>
         <a href="#vorteile">Vorteile</a>
@@ -142,15 +144,15 @@
     <section id="ergebnisse">
       <h2>📊 Tradingergebnisse</h2>
       <div class="grid">
-        <img src="img/ergebnisse/ergebnis1.jpg" alt="Ergebnis 1" style="width:100%; border: 2px solid gold; border-radius: 12px;">
-        <img src="img/ergebnisse/ergebnis2.jpg" alt="Ergebnis 2" style="width:100%; border: 2px solid gold; border-radius: 12px;">
+        <img src="img/ergebnisse/ergebn3.jpg" alt="Ergebnis 1">
+        <img src="img/ergebnisse/ergebn4.jpg" alt="Ergebnis 2">
       </div>
     </section>
 
     <section id="shop">
       <h2>🛍️ Shop</h2>
       <p>Mein Shop kommt bald für euch – mit exklusivem Trading-Gear!</p>
-      <img src="img/shop/shop-coming-soon.jpg" alt="Shop Vorschau" style="max-width:100%; margin-top:20px; border-radius: 10px;">
+      <img src="img/shop-coming-soon.png" alt="Shop Vorschau" style="max-width:100%; margin-top:20px;">
     </section>
 
     <section id="kontakt">
