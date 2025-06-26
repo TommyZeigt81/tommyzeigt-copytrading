@@ -2,183 +2,72 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TommyZeigt Copytrading – Premium</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0b0b0b, #141414);
-      color: #f1f1f1;
-      scroll-behavior: smooth;
-    }
-    nav {
-      background: #000;
-      padding: 16px 32px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
-    }
-    nav img { height: 48px; }
-    .nav-links a {
-      margin-left: 28px;
-      color: gold;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .nav-links a:hover { color: #fff700; }
-    header {
-      background: url('https://dummyimage.com/1600x600/0a0a0a/ffffff&text=TommyZeigt+Premium') no-repeat center/cover;
-      padding: 160px 20px 120px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3.5rem;
-      color: gold;
-      text-shadow: 0 0 18px rgba(255, 215, 0, 0.7);
-    }
-    header p {
-      font-size: 1.3rem;
-      margin-top: 16px;
-    }
-    .buttons {
-      margin-top: 40px;
-    }
-    .buttons a {
-      text-decoration: none;
-      background: gold;
-      color: black;
-      padding: 14px 26px;
-      border-radius: 8px;
-      font-weight: bold;
-      margin: 0 10px;
-      transition: 0.3s ease;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-    }
-    .buttons a:hover { background: #e6b800; }
-    section {
-      padding: 100px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    section h2 {
-      color: gold;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    section p {
-      text-align: center;
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 40px;
-      color: #ccc;
-    }
-    .ergebnisse-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    .ergebnisse-grid img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: none;
-      font-size: 1rem;
-    }
-    form button {
-      width: 100%;
-      padding: 14px;
-      background: gold;
-      border: none;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    form button:hover { background: #e6b800; }
-    footer {
-      padding: 40px 20px;
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TommyZeigt Premium Copytrading</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
-<body>
+<body class="bg-black text-white font-sans">
 
-  <nav>
-    <img src="TZ logo.png" alt="Logo" />
-    <div class="nav-links">
-      <a href="#hero">Start</a>
-      <a href="#vorteile">Vorteile</a>
-      <a href="#community">Community</a>
-      <a href="#shop">Shop</a>
-      <a href="#ergebnisse">Ergebnisse</a>
-      <a href="#kontakt">Kontakt</a>
-    </div>
-  </nav>
-
-  <header id="hero">
-    <h1>TommyZeigt Premium Copytrading</h1>
-    <p>Maximale Performance. Reale Ergebnisse. Starke Community.</p>
-    <div class="buttons">
-      <a href="https://t.me/TommY" target="_blank">Komm in meine Telegram-Gruppe</a>
-      <a href="https://www.instagram.com/tommyzeigtofficial" target="_blank">Instagram folgen</a>
+  <!-- HEADER -->
+  <header class="fixed w-full bg-black z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-yellow-400 text-xl font-bold">TommyZeigt</div>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="#start" class="hover:text-yellow-400">Start</a>
+        <a href="#vorteile" class="hover:text-yellow-400">Vorteile</a>
+        <a href="#community" class="hover:text-yellow-400">Community</a>
+        <a href="/ergebnisse" class="hover:text-yellow-400">Ergebnisse</a>
+        <a href="#kontakt" class="hover:text-yellow-400">Kontakt</a>
+      </nav>
     </div>
   </header>
 
-  <section id="vorteile">
-    <h2>🚀 Vorteile</h2>
-    <p>Du profitierst von meinem Know-how und kannst meine erfolgreichen Trades 1:1 übernehmen – ohne Vorerfahrung, ohne Stress!</p>
-  </section>
-
-  <section id="community">
-    <h2>🤝 Community</h2>
-    <p>Wachse mit anderen Tradern, lerne live mit, erhalte exklusive Insights & Support direkt über Telegram.</p>
-  </section>
-
-  <section id="shop">
-    <h2>🛒 Shop</h2>
-    <p>In Kürze: Premium-Merch, Trading-Tools, Desktop-Mousepads & mehr – alles im TommyZeigt Style!</p>
-  </section>
-
-  <section id="ergebnisse">
-    <h2>📈 Ergebnisse</h2>
-    <p>Live-Einblicke in meine echten Trading-Ergebnisse – aus dem Konto, für volle Transparenz.</p>
-    <div class="ergebnisse-grid">
-      <img src="/mnt/data/ergeb1.jpg" alt="Ergebnis 1" />
-      <img src="/mnt/data/ergb2.jpg" alt="Ergebnis 2" />
-      <img src="/mnt/data/ergeb3.jpg" alt="Ergebnis 3" />
-      <img src="/mnt/data/ergebn4.jpg" alt="Ergebnis 4" />
+  <!-- HERO SECTION -->
+  <section id="start" class="h-screen flex flex-col justify-center items-center text-center px-4 pt-24">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 text-yellow-400">TommyZeigt Premium</h1>
+    <p class="text-xl md:text-2xl mb-8 text-gray-300">Copytrading. Ergebnisse. Community.</p>
+    <div class="flex gap-4">
+      <a href="https://t.me/TommY" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">Telegram-Gruppe</a>
+      <a href="https://instagram.com/tommyzeigtofficial" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">Instagram</a>
     </div>
   </section>
 
-  <section id="kontakt">
-    <h2>📬 Kontakt</h2>
-    <p>Du hast Fragen oder willst direkt starten? Schreib mir!</p>
-    <form action="mailto:deine@email.de" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Dein Name" required />
-      <input type="email" name="email" placeholder="Deine E-Mail" required />
-      <textarea name="message" rows="5" placeholder="Deine Nachricht..."></textarea>
-      <button type="submit">Absenden</button>
-    </form>
+  <!-- VORTEILE SECTION -->
+  <section id="vorteile" class="py-20 bg-black px-4 text-center">
+    <h2 class="text-3xl text-yellow-400 font-bold mb-6">🚀 Vorteile</h2>
+    <p class="max-w-2xl mx-auto text-lg text-gray-300">
+      Du profitierst von meinem Know-how und kannst meine erfolgreichen Trades 1:1 übernehmen – ohne Vorerfahrung, ohne Stress!
+    </p>
   </section>
 
-  <footer>
-    &copy; 2025 TommyZeigt – Alle Rechte vorbehalten.
-  </footer>
+  <!-- COMMUNITY SECTION (Platzhalter) -->
+  <section id="community" class="py-20 bg-black px-4 text-center">
+    <h2 class="text-3xl text-yellow-400 font-bold mb-6">🤝 Community</h2>
+    <p class="max-w-2xl mx-auto text-lg text-gray-300">
+      Werde Teil von über 1.200 Tradern, die den TommyZeigt-Weg gehen – mit Live-Insights und echtem Austausch.
+    </p>
+  </section>
+
+  <!-- ERGEBNISSE BUTTON -->
+  <section class="py-12 bg-black px-4 text-center">
+    <a href="/ergebnisse" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">
+      📊 Live-Ergebnisse ansehen
+    </a>
+  </section>
+
+  <!-- KONTAKT SECTION -->
+  <section id="kontakt" class="py-20 bg-black px-4 text-center">
+    <h2 class="text-3xl text-yellow-400 font-bold mb-6">📩 Kontakt</h2>
+    <p class="text-gray-300 mb-6">Du hast Fragen oder willst direkt starten? Schreib mir!</p>
+    <form class="max-w-md mx-auto space-y-4">
+      <input type="text" placeholder="Dein Name" class="w-full px-4 py-2 rounded bg-gray-800 text-white" />
+      <input type="email" placeholder="Deine E-Mail" class="w-full px-4 py-2 rounded bg-gray-800 text-white" />
+      <textarea placeholder="Deine Nachricht" class="w-full px-4 py-2 rounded bg-gray-800 text-white"></textarea>
+      <button type="submit" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">
+        Absenden
+      </button>
+    </form>
+  </section>
 
 </body>
 </html>
