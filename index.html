@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TommyZeigt Copytrading</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/lucide-static@0.265.1/icons.css" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #f9f9f9;
-      color: #111;
+      background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
+      color: #fff;
       scroll-behavior: smooth;
     }
     header {
-      padding: 80px 20px 60px;
+      padding: 120px 20px 60px;
       text-align: center;
+      background: url('https://images.unsplash.com/photo-1581092919534-722b1f3d9cbd?fit=crop&w=1400&q=80') no-repeat center/cover;
+      position: relative;
     }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+    header * { position: relative; z-index: 2; }
     h1 {
-      font-size: 3rem;
-      color: #d4af37;
+      font-size: 2.8rem;
+      color: gold;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-out;
     }
     h2 {
-      color: #d4af37;
+      color: gold;
       margin-bottom: 20px;
     }
     p {
@@ -30,7 +43,7 @@
       margin-top: 10px;
     }
     nav {
-      background: #fff;
+      background: #0d0d0d;
       padding: 10px 20px;
       position: sticky;
       top: 0;
@@ -38,7 +51,7 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #333;
       z-index: 10;
     }
     nav img {
@@ -50,13 +63,13 @@
       gap: 30px;
     }
     nav a {
-      color: #d4af37;
+      color: gold;
       text-decoration: none;
       font-weight: bold;
       transition: 0.2s;
     }
     nav a:hover {
-      color: #bfa134;
+      color: #e6b800;
     }
     section {
       padding: 80px 20px;
@@ -72,15 +85,18 @@
     }
     .buttons a {
       text-decoration: none;
-      background: #d4af37;
+      background: gold;
       color: #000;
       padding: 14px 24px;
       border-radius: 8px;
       font-weight: bold;
       transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     .buttons a:hover {
-      background: #bfa134;
+      background: #e6b800;
     }
     iframe {
       width: 100%;
@@ -98,10 +114,10 @@
     input, textarea {
       padding: 12px;
       border-radius: 6px;
-      border: 1px solid #ccc;
+      border: none;
     }
     button {
-      background: #d4af37;
+      background: gold;
       color: #000;
       padding: 12px;
       border: none;
@@ -120,14 +136,22 @@
       display: block;
       margin: 20px auto;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+    .ergebnis-img:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <nav>
     <a href="#hero">
-      <img src="TZ logo.png" alt="TommyZeigt Logo">
+      <img src="TZ logo.png" alt="TommyZeigt Logo" />
     </a>
     <div class="nav-links">
       <a href="#hero">Start</a>
@@ -141,10 +165,10 @@
 
   <header id="hero">
     <h1>Dein Weg zum Erfolg – TommyZeigt Copytrading</h1>
-    <p>Starte jetzt dein Copytrading mit TommyZeigt.</p>
+    <p>Starte dein Trading mit Klarheit, Strategie und Community.</p>
     <div class="buttons">
-      <a href="https://t.me/TommY" target="_blank">Komm in meine Telegram-Gruppe</a>
-      <a href="https://www.instagram.com/tommyzeigtofficial" target="_blank">Instagram ansehen</a>
+      <a href="https://t.me/TommY" target="_blank"><i class="lucide lucide-send"></i> Telegram beitreten</a>
+      <a href="https://www.instagram.com/tommyzeigtofficial" target="_blank"><i class="lucide lucide-instagram"></i> Instagram folgen</a>
     </div>
   </header>
 
@@ -155,35 +179,32 @@
     <p>📈 Volle Transparenz, 24/7 Kontrolle</p>
   </section>
 
-  <section id="ergebnisse">
-    <h2>📈 Ergebnisse</h2>
-    <p>Konstante Gewinne durch strategisches Copytrading. Hier siehst du echte Auszüge aus realen Ergebnissen.</p>
-    <img src="ergebnisse-zwei.jpg" alt="Ergebnis 1" class="ergebnis-img">
-    <img src="neue-ergebnisse.jpg" alt="Ergebnis 2" class="ergebnis-img">
-    <img src="trading-ergebnisse-zwei.jpg" alt="Ergebnis 3" class="ergebnis-img">
-    <img src="ergeb1.jpg" alt="Ergebnis 4" class="ergebnis-img">
-    <img src="ergb2.jpg" alt="Ergebnis 5" class="ergebnis-img">
-    <img src="ergeb3.jpg" alt="Ergebnis 6" class="ergebnis-img">
-    <img src="ergebn4.jpg" alt="Ergebnis 7" class="ergebnis-img">
-  </section>
-
   <section id="community">
     <h2>🤝 Community</h2>
     <p>Werde Teil der TommyZeigt-Community – exklusive Insights, Live-Trading & Support. Gemeinsam wachsen!</p>
-    <img src="https://dummyimage.com/800x400/111/fff&text=Community+Screenshot" alt="Community" style="width:100%; margin-top:20px;">
+    <img src="https://dummyimage.com/800x400/111/fff&text=Community+Screenshot" alt="Community" style="width:100%; margin-top:20px; border-radius:12px; box-shadow: 0 0 20px rgba(255,215,0,0.2);">
   </section>
 
   <section id="shop">
     <h2>🛙 Shop</h2>
     <p>Demnächst verfügbar: exklusive TommyZeigt-Produkte, Merch und Tools für Trader!</p>
-    <img src="https://dummyimage.com/800x300/111/fff&text=Shop+Coming+Soon" alt="Shop Vorschau" style="width:100%; margin-top:20px;">
+    <img src="https://dummyimage.com/800x300/111/fff&text=Shop+Coming+Soon" alt="Shop Vorschau" style="width:100%; margin-top:20px; border-radius:12px;">
+  </section>
+
+  <section id="ergebnisse">
+    <h2>📈 Ergebnisse</h2>
+    <p>Aktuelle Trading-Ergebnisse aus dem Live-Konto – transparent und real:</p>
+    <img src="ergeb1.jpg" class="ergebnis-img" alt="Ergebnis 1" />
+    <img src="ergb2.jpg" class="ergebnis-img" alt="Ergebnis 2" />
+    <img src="ergeb3.jpg" class="ergebnis-img" alt="Ergebnis 3" />
+    <img src="ergebn4.jpg" class="ergebnis-img" alt="Ergebnis 4" />
   </section>
 
   <section id="kontakt">
     <h2>📬 Kontakt</h2>
     <form action="mailto:deine@email.de" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Dein Name" required>
-      <input type="email" name="email" placeholder="Deine E-Mail" required>
+      <input type="text" name="name" placeholder="Dein Name" required />
+      <input type="email" name="email" placeholder="Deine E-Mail" required />
       <textarea name="message" rows="5" placeholder="Deine Nachricht..."></textarea>
       <button type="submit">Absenden</button>
     </form>
