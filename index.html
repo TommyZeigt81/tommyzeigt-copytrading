@@ -1,104 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TommyZeigt Copytrading – Premium Community</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <style>
-    body {
-      background-color: #0b0b0b;
-      color: #ffffff;
-    }
-    .gold {
-      color: #FFD700;
-    }
-    .gold-bg {
-      background-color: #FFD700;
-      color: #000;
-    }
-  </style>
-</head>
-<body class="font-sans">
-
-  <!-- HEADER -->
-  <header class="fixed w-full bg-black z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TommyZeigt Copytrading</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black text-white font-sans">
+    <header class="flex justify-between items-center px-6 py-4 bg-black text-white border-b border-gray-800">
       <div class="flex items-center gap-2">
-        <img src="img/logo.png" alt="TommyZeigt Logo" class="h-8" />
-        <span class="text-xl font-bold gold">TommyZeigt</span>
+        <img src="img/logo.png" alt="TommyZeigt Logo" class="h-10" />
+        <span class="text-yellow-400 font-bold text-xl">TommyZeigt</span>
       </div>
-      <nav class="space-x-6 text-sm font-semibold">
-        <a href="#start" class="hover:text-yellow-400">Start</a>
+      <nav class="space-x-6">
+        <a href="#" class="hover:text-yellow-400">Start</a>
         <a href="#vorteile" class="hover:text-yellow-400">Vorteile</a>
         <a href="#community" class="hover:text-yellow-400">Community</a>
         <a href="#ergebnisse" class="hover:text-yellow-400">Ergebnisse</a>
         <a href="#shop" class="hover:text-yellow-400">Shop</a>
         <a href="#kontakt" class="hover:text-yellow-400">Kontakt</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <!-- HERO SECTION -->
-  <section id="start" class="h-screen flex flex-col justify-center items-center text-center px-4 pt-24">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4 gold">TommyZeigt Copytrading</h1>
-    <p class="text-xl md:text-2xl mb-8 text-gray-300">Lass deine Trades für dich arbeiten.</p>
-    <div class="flex gap-4">
-      <a href="https://t.me/TommY" class="gold-bg px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">Telegram-Gruppe</a>
-      <a href="https://instagram.com/tommyzeigtofficial" class="gold-bg px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">Instagram</a>
-    </div>
-  </section>
-
-  <!-- VORTEILE SECTION -->
-  <section id="vorteile" class="py-20 px-4 text-center">
-    <h2 class="text-3xl gold font-bold mb-6">🚀 Vorteile</h2>
-    <p class="max-w-2xl mx-auto text-lg text-gray-300">Mit TommyZeigt Copytrading sparst du Zeit, nutzt Profi-Setups und hast dein Risiko im Griff – ohne Stress, ohne Charts analysieren zu müssen.</p>
-  </section>
-
-  <!-- COMMUNITY SECTION -->
-  <section id="community" class="py-20 px-4 text-center bg-gray-900">
-    <h2 class="text-3xl gold font-bold mb-6">🤝 Unsere Community</h2>
-    <p class="text-lg text-gray-300 mb-4">Mehr als 1.200 Trader sind schon dabei – mit täglichen Insights, Setups und Support.</p>
-    <a href="https://t.me/TommY" class="gold-bg px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">Jetzt beitreten</a>
-  </section>
-
-  <!-- ERGEBNISSE SECTION -->
-  <section id="ergebnisse" class="py-20 px-4 text-center">
-    <h2 class="text-3xl gold font-bold mb-6">📊 Live-Ergebnisse</h2>
-    <p class="text-lg text-gray-300 mb-6">Echte Screenshots. Echte Konten. 100 % transparent.</p>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="img/ergebnisse/ergebnis1.jpg" class="rounded-lg shadow-lg hover:scale-105 transition" />
-      <img src="img/ergebnisse/ergebnis2.jpg" class="rounded-lg shadow-lg hover:scale-105 transition" />
-      <img src="img/ergebnisse/ergebnis3.jpg" class="rounded-lg shadow-lg hover:scale-105 transition" />
-    </div>
-  </section>
-
-  <!-- SHOP SECTION -->
-  <section id="shop" class="py-20 px-4 text-center bg-gray-900">
-    <h2 class="text-3xl gold font-bold mb-6">🛍️ Shop</h2>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <div class="bg-black rounded-lg p-4 shadow-lg">
-        <img src="img/shop/mousepad.jpg" alt="Mousepad" class="rounded mb-4" />
-        <h3 class="text-xl font-semibold gold">Mousepad XXL</h3>
-        <p class="text-gray-300 mb-2">Edles Deskpad mit Goldakzent – „TommyZeigt Copytrading“ Design</p>
-        <span class="block text-white font-bold mb-3">29,90 €</span>
-        <a href="#" class="gold-bg px-4 py-2 rounded font-semibold hover:scale-105 transition inline-block">Jetzt kaufen</a>
+    <section class="text-center py-20 bg-black">
+      <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">TommyZeigt Copytrading</h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">Lass deine Trades für dich arbeiten.</p>
+      <div class="flex justify-center gap-4">
+        <a href="#" class="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-300">Telegram-Gruppe</a>
+        <a href="#" class="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-300">Instagram</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- KONTAKT SECTION -->
-  <section id="kontakt" class="py-20 px-4 text-center">
-    <h2 class="text-3xl gold font-bold mb-6">📩 Kontakt</h2>
-    <p class="text-gray-300 mb-6">Du hast Fragen oder willst direkt loslegen? Schreib mir direkt hier.</p>
-    <form class="max-w-md mx-auto space-y-4">
-      <input type="text" placeholder="Dein Name" class="w-full px-4 py-2 rounded bg-gray-800 text-white" />
-      <input type="email" placeholder="Deine E-Mail" class="w-full px-4 py-2 rounded bg-gray-800 text-white" />
-      <textarea placeholder="Deine Nachricht" class="w-full px-4 py-2 rounded bg-gray-800 text-white"></textarea>
-      <button type="submit" class="gold-bg px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">Absenden</button>
-    </form>
-  </section>
+    <section id="vorteile" class="text-center py-20 bg-black">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-4">🚀 Vorteile</h2>
+      <p class="max-w-2xl mx-auto text-gray-300">Mit TommyZeigt Copytrading nutzt du meine Erfahrung & Setups 1:1 – du sparst Zeit, reduzierst Fehler und hast dein Risiko im Griff. Kein Stress, keine Vorerfahrung nötig.</p>
+    </section>
 
-</body>
+    <section id="community" class="text-center py-20 bg-[#0d1117]">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-4">🤝 Unsere Community</h2>
+      <p class="max-w-2xl mx-auto text-gray-300 mb-6">Mehr als 1.200 Trader sind schon dabei – mit täglichen Insights, Setups und Support.</p>
+      <a href="#" class="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-300">Jetzt beitreten</a>
+    </section>
+
+    <section id="ergebnisse" class="text-center py-20 bg-black">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-4">📊 Tradingergebnisse</h2>
+      <p class="text-gray-300 mb-8">Echte Screenshots. Echte Konten. 100 % transparent.</p>
+      <div class="flex justify-center gap-6 flex-wrap">
+        <img src="img/ergebnisse/1.png" alt="Ergebnis 1" class="h-60 rounded shadow" />
+        <img src="img/ergebnisse/2.png" alt="Ergebnis 2" class="h-60 rounded shadow" />
+      </div>
+    </section>
+
+    <section id="shop" class="text-center py-20 bg-[#0d1117]">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-4">🛍️ Shop</h2>
+      <p class="text-gray-300 mb-4">Mein Shop kommt bald für euch – mit exklusivem Trading-Gear!</p>
+      <img src="img/shop/mousepad.jpg" alt="Mousepad XXL" class="h-72 mx-auto rounded shadow" />
+    </section>
+
+    <footer class="text-center text-gray-500 text-sm py-6 bg-black">
+      © 2025 TommyZeigt. Alle Rechte vorbehalten.
+    </footer>
+  </body>
 </html>
