@@ -40,6 +40,10 @@
         padding-bottom: 100px;
         background: #f9f9f9;
       }
+      .hero img {
+        max-width: 180px;
+        margin-bottom: 30px;
+      }
       .hero h1 {
         font-size: 48px;
       }
@@ -62,6 +66,26 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 40px;
       }
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        background: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      }
+      .card h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .card p {
+        font-size: 16px;
+        color: #444;
+      }
       footer {
         text-align: center;
         font-size: 14px;
@@ -73,7 +97,7 @@
   </head>
   <body>
     <header>
-      <div><strong>TommyZeigt</strong></div>
+      <div><img src="img/logo.png" alt="TommyZeigt Logo" style="height:40px; vertical-align:middle;"> <strong>TommyZeigt</strong></div>
       <nav>
         <a href="#start">Start</a>
         <a href="#vorteile">Vorteile</a>
@@ -85,6 +109,7 @@
     </header>
 
     <section class="hero" id="start">
+      <img src="img/tommy-startbild.png" alt="TommyZeigt">
       <h1>TommyZeigt Copytrading</h1>
       <p>Lass deine Trades für dich arbeiten – einfach, sicher und professionell.</p>
       <a href="#kontakt" class="button">Jetzt starten</a>
@@ -92,7 +117,20 @@
 
     <section id="vorteile">
       <h2>🚀 Vorteile</h2>
-      <p>Mit TommyZeigt Copytrading nutzt du meine Erfahrung & Setups 1:1 – du sparst Zeit, reduzierst Fehler und hast dein Risiko im Griff. Kein Stress, keine Vorerfahrung nötig.</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>⏱️ Zeitersparnis</h3>
+          <p>Nutze meine Strategien 1:1 und spare dir stundenlange Chartanalyse.</p>
+        </div>
+        <div class="card">
+          <h3>🔒 Risiko-Kontrolle</h3>
+          <p>Mit klaren Setups und Erfahrungswerten bist du immer auf der sicheren Seite.</p>
+        </div>
+        <div class="card">
+          <h3>📈 Profit-Chancen</h3>
+          <p>Profitiere direkt von meiner Markt-Erfahrung – ohne Vorkenntnisse.</p>
+        </div>
+      </div>
     </section>
 
     <section id="community">
@@ -117,8 +155,12 @@
 
     <section id="kontakt">
       <h2>📬 Kontakt</h2>
-      <p>Schreib mir direkt auf Telegram oder Instagram.</p>
-      <p><a href="https://t.me/TommY" class="button">Telegram</a> <a href="https://www.instagram.com/tommyzeigtofficial" class="button">Instagram</a></p>
+      <form action="#" method="post">
+        <p><input type="text" name="name" placeholder="Dein Name" style="width:100%; padding:12px; margin-bottom:10px;"></p>
+        <p><input type="email" name="email" placeholder="Deine E-Mail" style="width:100%; padding:12px; margin-bottom:10px;"></p>
+        <p><textarea name="nachricht" placeholder="Deine Nachricht" rows="5" style="width:100%; padding:12px;"></textarea></p>
+        <p><button type="submit" class="button">Absenden</button></p>
+      </form>
     </section>
 
     <footer>
