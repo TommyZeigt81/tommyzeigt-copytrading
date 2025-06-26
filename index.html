@@ -19,6 +19,11 @@
         padding: 20px 40px;
         border-bottom: 1px solid #eee;
       }
+      header img {
+        height: 28px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
       nav a {
         margin-left: 20px;
         text-decoration: none;
@@ -36,30 +41,38 @@
       }
       .hero {
         text-align: center;
-        padding-top: 120px;
-        padding-bottom: 100px;
-        background: #f9f9f9;
+        padding: 100px 40px 80px;
+        background: #f2f2f2;
       }
       .hero img {
-        max-width: 180px;
+        max-width: 200px;
         margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
       }
       .hero h1 {
         font-size: 48px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
       .hero p {
         font-size: 20px;
         margin-top: 20px;
+        color: #444;
       }
       .button {
         display: inline-block;
-        background: #f5c518;
+        background: linear-gradient(to right, #f5c518, #f1b400);
         color: #000;
         font-weight: bold;
-        padding: 12px 24px;
+        padding: 12px 30px;
         margin-top: 30px;
-        border-radius: 6px;
+        border-radius: 8px;
         text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: background 0.3s ease;
+      }
+      .button:hover {
+        background: linear-gradient(to right, #f1b400, #f5c518);
       }
       .grid {
         display: grid;
@@ -97,7 +110,7 @@
   </head>
   <body>
     <header>
-      <div><img src="img/TZ logo.png" alt="TommyZeigt Logo" style="height:40px; vertical-align:middle;"> <strong>TommyZeigt</strong></div>
+      <div><img src="img/TZ logo.png" alt="TommyZeigt Logo"> <strong>TommyZeigt</strong></div>
       <nav>
         <a href="#start">Start</a>
         <a href="#vorteile">Vorteile</a>
@@ -141,4 +154,30 @@
 
     <section id="ergebnisse">
       <h2>📊 Tradingergebnisse</h2>
-      <div
+      <div class="grid">
+        <img src="img/ergeb1.jpg" alt="Ergebnis 1">
+        <img src="img/ergb2.jpg" alt="Ergebnis 2">
+      </div>
+    </section>
+
+    <section id="shop">
+      <h2>🛍️ Shop</h2>
+      <p>Mein Shop kommt bald für euch – mit exklusivem Trading-Gear!</p>
+      <img src="img/shop/preview.jpg" alt="Shop Vorschau" style="max-width:100%; margin-top:20px;">
+    </section>
+
+    <section id="kontakt">
+      <h2>📬 Kontakt</h2>
+      <form action="#" method="post">
+        <p><input type="text" name="name" placeholder="Dein Name" style="width:100%; padding:12px; margin-bottom:10px;"></p>
+        <p><input type="email" name="email" placeholder="Deine E-Mail" style="width:100%; padding:12px; margin-bottom:10px;"></p>
+        <p><textarea name="nachricht" placeholder="Deine Nachricht" rows="5" style="width:100%; padding:12px;"></textarea></p>
+        <p><button type="submit" class="button">Absenden</button></p>
+      </form>
+    </section>
+
+    <footer>
+      &copy; 2025 TommyZeigt. Alle Rechte vorbehalten.
+    </footer>
+  </body>
+</html>
