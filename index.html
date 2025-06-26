@@ -43,8 +43,6 @@
       .hero img {
         max-width: 180px;
         margin-bottom: 30px;
-        border-radius: 12px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
       }
       .hero h1 {
         font-size: 48px;
@@ -62,10 +60,6 @@
         margin-top: 30px;
         border-radius: 6px;
         text-decoration: none;
-        transition: background 0.3s ease;
-      }
-      .button:hover {
-        background: #ffd700;
       }
       .grid {
         display: grid;
@@ -92,6 +86,20 @@
         font-size: 16px;
         color: #444;
       }
+      .premium-ergbnisse {
+        background: #000;
+        padding: 60px 40px;
+        border-radius: 20px;
+      }
+      .premium-ergbnisse img {
+        border: 3px solid gold;
+        border-radius: 12px;
+        box-shadow: 0 0 20px gold;
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        display: block;
+      }
       footer {
         text-align: center;
         font-size: 14px;
@@ -99,34 +107,11 @@
         color: #666;
         background: #f1f1f1;
       }
-      .ergebnisse-section {
-        background: #111;
-        color: #fff;
-        text-align: center;
-        padding: 100px 20px;
-      }
-      .ergebnisse-section h2 {
-        font-size: 36px;
-        margin-bottom: 40px;
-      }
-      .ergebnisse-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-      }
-      .ergebnisse-gallery img {
-        max-width: 400px;
-        width: 100%;
-        border-radius: 10px;
-        border: 2px solid gold;
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-      }
     </style>
   </head>
   <body>
     <header>
-      <div><img src="img/TZ logo.png" alt="TommyZeigt Logo" style="height:40px; vertical-align:middle; border-radius: 6px;"> <strong>TommyZeigt</strong></div>
+      <div><img src="img/TZ%20logo.png" alt="TommyZeigt Logo" style="height:40px; vertical-align:middle;"> <strong>TommyZeigt</strong></div>
       <nav>
         <a href="#start">Start</a>
         <a href="#vorteile">Vorteile</a>
@@ -138,7 +123,7 @@
     </header>
 
     <section class="hero" id="start">
-      <img src="img/TZ logo.png" alt="TommyZeigt">
+      <img src="img/TZ%20logo.png" alt="TommyZeigt">
       <h1>TommyZeigt Copytrading</h1>
       <p>Lass deine Trades für dich arbeiten – einfach, sicher und professionell.</p>
       <a href="#kontakt" class="button">Jetzt starten</a>
@@ -168,19 +153,18 @@
       <a href="https://t.me/TommY" class="button">Telegram-Gruppe</a>
     </section>
 
-    <section class="ergebnisse-section" id="ergebnisse">
+    <section id="ergebnisse" class="premium-ergbnisse">
       <h2>📊 Tradingergebnisse</h2>
-      <div class="ergebnisse-gallery">
-        <img src="img/ergebnisse/ergb1.jpg" alt="Ergebnis 1">
-        <img src="img/ergebnisse/ergb2.jpg" alt="Ergebnis 2">
-        <img src="img/ergebnisse/ergb3.jpg" alt="Ergebnis 3">
+      <div class="grid">
+        <img src="img/ergb1.jpg" alt="Ergebnis 1">
+        <img src="img/ergb2.jpg" alt="Ergebnis 2">
       </div>
     </section>
 
     <section id="shop">
-      <h2>🛍️ Shop</h2>
+      <h2>🛖 Shop</h2>
       <p>Mein Shop kommt bald für euch – mit exklusivem Trading-Gear!</p>
-      <img src="img/shop/coming-soon.jpg" alt="Shop Vorschau" style="max-width:100%; margin-top:20px;">
+      <img src="img/shop-coming-soon.png" alt="Shop Vorschau" style="max-width:100%; margin-top:20px;">
     </section>
 
     <section id="kontakt">
