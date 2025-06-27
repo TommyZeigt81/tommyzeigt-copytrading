@@ -117,26 +117,28 @@
       text-decoration: none;
       z-index: 999;
     }
-    .community-section {
+    .community-content {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
     }
-    .community-text {
-      max-width: 500px;
-      text-align: left;
+    .community-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     .community-img {
       max-width: 300px;
+      border: 2px solid gold;
       border-radius: 10px;
       box-shadow: 0 0 15px gold;
     }
   </style>
 </head>
 <body>
-
   <header>
     <img src="img/TZ logo.png" alt="TommyZeigt Logo">
     <nav>
@@ -161,14 +163,13 @@
 
   <section class="section" id="community">
     <h2 style="color: gold">👑 Unsere Community</h2>
-    <div class="community-section">
-      <div class="community-text">
-        <p>Schon über <strong>1.500 aktive Copytrader</strong> sind dabei – mit exklusiven Einblicken, Support und echter Power!</p>
-        <a href="https://t.me/TommY" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block; font-weight: bold;">Telegram-Gruppe</a>
-        <br><br>
-        <a href="https://instagram.com/tommyzeigtofficial" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block; font-weight: bold;">Instagram</a>
+    <p>Schon über <strong>1.500 aktive Copytrader</strong> sind dabei – mit exklusiven Einblicken, Support und echter Power!</p>
+    <div class="community-content">
+      <div class="community-buttons">
+        <a href="https://t.me/TommY" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block; font-weight: bold; text-decoration: none;">Telegram-Gruppe</a>
+        <a href="https://instagram.com/tommyzeigtofficial" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block; font-weight: bold; text-decoration: none;">Instagram</a>
       </div>
-      <img class="community-img" src="img/community-beispiel.jpg" alt="Community Beispiel">
+      <img class="community-img" src="img/communitybeispiel.png" alt="Community Beispiel">
     </div>
   </section>
 
@@ -196,8 +197,7 @@
   <section class="section" id="kontakt">
     <h2 style="color: gold">📬 Kontakt</h2>
     <p>Du hast Fragen? Schreib mir auf Telegram oder Instagram!</p>
-    <a href="https://t.me/TommY" style="color: gold; font-weight: bold;">@TommY</a><br>
-    <a href="https://instagram.com/tommyzeigtofficial" style="color: gold; font-weight: bold;">@tommyzeigtofficial</a>
+    <a href="https://t.me/TommY" style="color: gold; font-weight: bold;">@TommY</a>
   </section>
 
   <footer>
@@ -205,6 +205,5 @@
   </footer>
 
   <a class="floating-btn" href="https://t.me/TommY">Telegram 💬</a>
-
 </body>
 </html>
