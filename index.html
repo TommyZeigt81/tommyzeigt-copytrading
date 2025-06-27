@@ -117,31 +117,38 @@
       text-decoration: none;
       z-index: 999;
     }
-    .community-flex {
+    .community-grid {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      flex-wrap: nowrap;
       gap: 40px;
-      flex-wrap: wrap;
-      margin-top: 30px;
+      margin-top: 40px;
     }
-    .community-btns {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .community-text {
+      flex: 1;
+      text-align: left;
     }
-    .community-btns a {
+    .community-buttons {
+      margin-top: 20px;
+    }
+    .community-buttons a {
       background-color: gold;
       color: black;
-      font-weight: bold;
-      padding: 10px 16px;
+      padding: 10px 20px;
+      margin-right: 10px;
       border-radius: 6px;
+      font-weight: bold;
       text-decoration: none;
       box-shadow: 0 0 10px gold;
     }
-    .community-img {
-      max-width: 280px;
-      border-radius: 10px;
+    .community-image {
+      flex: 1;
+      text-align: center;
+    }
+    .community-image img {
+      max-width: 100%;
+      border-radius: 12px;
       box-shadow: 0 0 15px gold;
     }
   </style>
@@ -171,14 +178,18 @@
   </section>
 
   <section class="section" id="community">
-    <h2 style="color: gold">👑 Unsere Community</h2>
-    <p>Schon über <strong>1.500 aktive Copytrader</strong> sind dabei – mit exklusiven Einblicken, Support und echter Power!</p>
-    <div class="community-flex">
-      <div class="community-btns">
-        <a href="https://t.me/TommY">Telegram-Gruppe</a>
-        <a href="https://www.instagram.com/tommyzeigtofficial">Instagram</a>
+    <div class="community-grid">
+      <div class="community-text">
+        <h2 style="color: gold">👑 Unsere Community</h2>
+        <p>Schon über <strong>1.500 aktive Copytrader</strong> sind dabei – mit exklusiven Einblicken, Support und echter Power!</p>
+        <div class="community-buttons">
+          <a href="https://t.me/TommY">Telegram</a>
+          <a href="https://www.instagram.com/tommyzeigtofficial">Instagram</a>
+        </div>
       </div>
-      <img src="img/community.png" alt="Community Beispiel" class="community-img">
+      <div class="community-image">
+        <img src="img/community.png" alt="Community Bild">
+      </div>
     </div>
   </section>
 
