@@ -117,33 +117,18 @@
       text-decoration: none;
       z-index: 999;
     }
-    .community-wrapper {
+    .community-content {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
+      gap: 30px;
       margin-top: 30px;
+      flex-wrap: wrap;
     }
     .community-buttons {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-    }
-    .community-buttons a {
-      background-color: gold;
-      color: black;
-      padding: 10px 15px;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      text-align: center;
-      box-shadow: 0 0 10px gold;
-    }
-    .community-img {
-      max-width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px gold;
+      gap: 15px;
     }
   </style>
 </head>
@@ -174,12 +159,12 @@
   <section class="section" id="community">
     <h2 style="color: gold">👑 Unsere Community</h2>
     <p>Schon über <strong>1.500 aktive Copytrader</strong> sind dabei – mit exklusiven Einblicken, Support und echter Power!</p>
-    <div class="community-wrapper">
+    <div class="community-content">
       <div class="community-buttons">
-        <a href="https://t.me/TommY">Telegram-Gruppe</a>
-        <a href="https://instagram.com/tommyzeigtofficial">Instagram</a>
+        <a href="https://t.me/TommY"><button>Telegram-Gruppe</button></a>
+        <a href="https://instagram.com/tommyzeigtofficial"><button>Instagram</button></a>
       </div>
-      <img class="community-img" src="img/community.jpg" alt="Community Beispiel">
+      <img src="img/community.png" alt="Community Beispiel" style="max-width: 250px; border-radius: 10px; box-shadow: 0 0 10px gold;">
     </div>
   </section>
 
@@ -191,6 +176,12 @@
       <img class="result-img" src="img/ergeb3.jpg" alt="Ergebnis 3">
       <img class="result-img" src="img/ergebn4.jpg" alt="Ergebnis 4">
     </div>
+  </section>
+
+  <section class="section" id="shop">
+    <h2 style="color: gold">🛒 TommyZeigt Shop</h2>
+    <p>Bald ist es soweit – der <strong>offizielle TommyZeigt Shop</strong> startet mit exklusiven Trading-Produkten, Merch und mehr!</p>
+    <p style="color: gray;">📦 Launch in Vorbereitung – stay tuned!</p>
   </section>
 
   <section class="section chart-container">
