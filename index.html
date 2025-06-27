@@ -30,6 +30,7 @@
     nav a {
       color: gold;
       text-decoration: none;
+      font-weight: bold;
     }
     .section {
       padding: 60px 20px;
@@ -53,12 +54,6 @@
       border-radius: 8px;
       box-shadow: 0 0 15px gold;
     }
-    .countdown {
-      font-size: 24px;
-      font-weight: bold;
-      color: gold;
-      margin-top: 20px;
-    }
     .chart-container {
       width: 100%;
       max-width: 800px;
@@ -68,6 +63,8 @@
       width: 100%;
       height: 480px;
       border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
     }
     footer {
       background-color: #000;
@@ -75,6 +72,19 @@
       text-align: center;
       padding: 20px;
       margin-top: 60px;
+    }
+    button {
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #d4af37;
     }
   </style>
 </head>
@@ -94,12 +104,7 @@
   <section class="section" id="start">
     <h1 style="color: gold">TommyZeigt Copytrading</h1>
     <p>Lass deine Trades für dich arbeiten – einfach, sicher und professionell.</p>
-    <button style="background-color: gold; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Jetzt starten</button>
-  </section>
-
-  <section class="section" id="countdown">
-    <h2 style="color: gold">⏳ Nächster CopyTrade startet in:</h2>
-    <div class="countdown" id="countdown-timer">Lade...</div>
+    <button>Jetzt starten</button>
   </section>
 
   <section class="section" id="vorteile">
@@ -109,8 +114,8 @@
 
   <section class="section" id="community">
     <h2 style="color: gold">👑 Unsere Community</h2>
-    <p>Mehr als 1.200 Trader sind schon dabei – mit Insights, Setups und Support.</p>
-    <a href="https://t.me/TommY" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block;">Telegram-Gruppe</a>
+    <p>Schon über <strong>1.500 aktive Copytrader</strong> sind dabei – mit exklusiven Einblicken, Support und echter Power!</p>
+    <a href="https://t.me/TommY" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block; font-weight: bold;">Telegram-Gruppe</a>
   </section>
 
   <section class="section" id="ergebnisse">
@@ -123,6 +128,12 @@
     </div>
   </section>
 
+  <section class="section" id="shop">
+    <h2 style="color: gold">🛒 TommyZeigt Shop</h2>
+    <p>Bald ist es soweit – der <strong>offizielle TommyZeigt Shop</strong> startet mit exklusiven Trading-Produkten, Merch und mehr!</p>
+    <p style="color: gray;">📦 Launch in Vorbereitung – stay tuned!</p>
+  </section>
+
   <section class="section chart-container">
     <h2 style="color: gold">📈 Live-Gold-Chart</h2>
     <iframe src="https://www.tradingview.com/widgetembed/?frameElementId=tradingview_bfe10&amp;symbol=OANDA%3AXAUUSD&amp;interval=60&amp;hidesidetoolbar=1&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=[]&amp;theme=dark&amp;style=1&amp;timezone=Europe%2FBerlin&amp;withdateranges=1&amp;hidevolume=1"></iframe>
@@ -131,37 +142,12 @@
   <section class="section" id="kontakt">
     <h2 style="color: gold">📬 Kontakt</h2>
     <p>Du hast Fragen? Schreib mir auf Telegram oder Instagram!</p>
-    <a href="https://t.me/TommY" style="color: gold;">@TommY</a>
+    <a href="https://t.me/TommY" style="color: gold; font-weight: bold;">@TommY</a>
   </section>
 
   <footer>
     <p>&copy; 2025 TommyZeigt Copytrading</p>
   </footer>
-
-  <script>
-    const countdownElement = document.getElementById("countdown-timer");
-    const target = new Date();
-    target.setHours(target.getHours() + 1);
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = target - now;
-
-      if (diff <= 0) {
-        countdownElement.innerHTML = "🚀 Es geht los!";
-        return;
-      }
-
-      const h = Math.floor(diff / (1000 * 60 * 60));
-      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-      countdownElement.innerHTML = `${h}h ${m}m ${s}s`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
 
 </body>
 </html>
