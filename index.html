@@ -117,7 +117,7 @@
       text-decoration: none;
       z-index: 999;
     }
-    .community-content {
+    .community-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -130,15 +130,25 @@
       flex-direction: column;
       gap: 10px;
     }
+    .community-buttons a {
+      background-color: gold;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 0 10px gold;
+    }
     .community-img {
-      max-width: 300px;
-      border: 2px solid gold;
+      max-width: 250px;
       border-radius: 10px;
       box-shadow: 0 0 15px gold;
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="img/TZ logo.png" alt="TommyZeigt Logo">
     <nav>
@@ -164,12 +174,12 @@
   <section class="section" id="community">
     <h2 style="color: gold">👑 Unsere Community</h2>
     <p>Schon über <strong>1.500 aktive Copytrader</strong> sind dabei – mit exklusiven Einblicken, Support und echter Power!</p>
-    <div class="community-content">
+    <div class="community-wrapper">
       <div class="community-buttons">
-        <a href="https://t.me/TommY" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block; font-weight: bold; text-decoration: none;">Telegram-Gruppe</a>
-        <a href="https://instagram.com/tommyzeigtofficial" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block; font-weight: bold; text-decoration: none;">Instagram</a>
+        <a href="https://t.me/TommY">Telegram-Gruppe</a>
+        <a href="https://instagram.com/tommyzeigtofficial">Instagram</a>
       </div>
-      <img class="community-img" src="img/communitybeispiel.png" alt="Community Beispiel">
+      <img class="community-img" src="img/community.jpg" alt="Community Beispiel">
     </div>
   </section>
 
@@ -181,12 +191,6 @@
       <img class="result-img" src="img/ergeb3.jpg" alt="Ergebnis 3">
       <img class="result-img" src="img/ergebn4.jpg" alt="Ergebnis 4">
     </div>
-  </section>
-
-  <section class="section" id="shop">
-    <h2 style="color: gold">🛒 TommyZeigt Shop</h2>
-    <p>Bald ist es soweit – der <strong>offizielle TommyZeigt Shop</strong> startet mit exklusiven Trading-Produkten, Merch und mehr!</p>
-    <p style="color: gray;">📦 Launch in Vorbereitung – stay tuned!</p>
   </section>
 
   <section class="section chart-container">
@@ -205,5 +209,6 @@
   </footer>
 
   <a class="floating-btn" href="https://t.me/TommY">Telegram 💬</a>
+
 </body>
 </html>
