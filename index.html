@@ -117,6 +117,18 @@
       text-decoration: none;
       z-index: 999;
     }
+    .community-img-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .community-img-container img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px gold;
+    }
   </style>
 </head>
 <body>
@@ -147,6 +159,9 @@
     <h2 style="color: gold">👑 Unsere Community</h2>
     <p>Schon über <strong>1.500 aktive Copytrader</strong> sind dabei – mit exklusiven Einblicken, Support und echter Power!</p>
     <a href="https://t.me/TommY" style="background-color: gold; color: black; padding: 10px 15px; border-radius: 4px; display: inline-block; font-weight: bold;">Telegram-Gruppe</a>
+    <div class="community-img-container">
+      <img src="img/community-screenshot.png" alt="Community Beispiel">
+    </div>
   </section>
 
   <section class="section" id="ergebnisse">
