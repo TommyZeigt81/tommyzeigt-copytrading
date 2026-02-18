@@ -4,44 +4,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TommyZeigt – Black Ops Control Room</title>
+<title>TommyZeigt – Performance Control Room</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<video autoplay muted loop class="video-bg">
-<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-</video>
-
+<canvas id="chartCanvas"></canvas>
 <div class="overlay"></div>
-<div class="cursor-light"></div>
+
+<div class="container">
 
 <header>
 <div class="logo">
 <div class="logo-box">TZ</div>
-<div>TommyZeigt – Black Ops Mode</div>
+<div>TommyZeigt – Performance Control Room</div>
 </div>
 <nav>
-<a href="#">Performance</a>
-<a href="#">Community</a>
+<a href="#performance">Performance</a>
+<a href="#journal">Wochenjournal</a>
+<a href="#community">Community</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>Elite Trading.<br><span>Absolute Kontrolle.</span></h1>
-<p>XAUUSD Fokus · Community Support · Disziplin System</p>
-
-<div class="live-performance">
-Aktuelle Simulation: <span>12.00%</span>
+<div>
+<h1>Performance ist Struktur.<br><span>Nicht Glück.</span></h1>
+<p>XAUUSD Fokus · Wöchentliche Dokumentation · Community basiert</p>
+<a href="#" class="btn-primary">Jetzt Discord beitreten</a>
 </div>
 
-<a href="#" class="btn-primary">Discord beitreten</a>
+<div class="panel">
+<h3>Aktueller Status</h3>
+<div class="kpi-grid">
+<div class="kpi"><h2>+XX%</h2><p>Seit Start</p></div>
+<div class="kpi"><h2>+X.X%</h2><p>Diese Woche</p></div>
+<div class="kpi"><h2>XX%</h2><p>Trefferquote</p></div>
+<div class="kpi"><h2>X.X%</h2><p>Max Drawdown</p></div>
+</div>
+</div>
+</section>
+
+<section id="journal">
+<h2 class="section-title">Wochenergebnisse</h2>
+
+<div class="week-card">
+<h3>Woche 06 / 2026 – +X.X%</h3>
+<p>Kommentar: Marktstruktur bestätigt, saubere Trendfortsetzung.</p>
+</div>
+
+<div class="week-card">
+<h3>Woche 07 / 2026 – +X.X%</h3>
+<p>Kommentar: Kontrollierter Rücklauf, Risiko stabil gehalten.</p>
+</div>
+
+</section>
+
+<section id="performance">
+<h2 class="section-title">Performance Archiv</h2>
+<img src="assets/performance1.jpg" alt="Performance Monat">
+<img src="assets/performance2.jpg" alt="Performance Monat">
+</section>
+
+<section>
+<h2 class="section-title">Trading Prinzipien</h2>
+<ul class="principles">
+<li><strong>Kein Martingale</strong> – kontrollierte Positionsstruktur</li>
+<li><strong>Kein Grid</strong> – kein Eskalationssystem</li>
+<li><strong>Feste Risikostruktur</strong> – planbare Exposition</li>
+<li><strong>Dokumentierte Historie</strong> – transparente Nachvollziehbarkeit</li>
+<li><strong>Wöchentliche Updates</strong> – konstante Performance-Berichte</li>
+</ul>
+</section>
+
+<section id="community">
+<div class="discord-block">
+<h2>Trading ist kein Einzelkampf.</h2>
+<p>Struktur. Austausch. Verantwortung.</p>
+<a href="#" class="btn-primary">Discord Community beitreten</a>
+</div>
 </section>
 
 <footer>
-© 2026 TommyZeigt · Black Ops Experience · Trading beinhaltet Risiko.
+© 2026 TommyZeigt · Alle Rechte vorbehalten.<br>
+Risikohinweis: Trading beinhaltet Risiko. Vergangene Ergebnisse sind keine Garantie für zukünftige Gewinne.
 </footer>
+
+</div>
 
 <script src="js/main.js"></script>
 </body>
