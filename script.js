@@ -2,14 +2,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".metric");
     counters.forEach(counter => {
-        const update = () => {
-            const target = +counter.getAttribute("data-target");
-            const count = +counter.innerText;
-            const increment = target / 100;
+        const target = parseFloat(counter.getAttribute("data-target"));
+        let count = 0;
+        const increment = target / 120;
 
+        const update = () => {
+            count += increment;
             if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(update, 20);
+                counter.innerText = count.toFixed(1);
+                requestAnimationFrame(update);
             } else {
                 counter.innerText = target;
             }

@@ -3,55 +3,53 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>TommyZeigt – Performance Control Room</title>
+<title>TommyZeigt – Private Trading Terminal</title>
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
 </head>
 <body>
 
-<div class="background-wireframe"></div>
+<div class="terminal-noise"></div>
+<div class="chart-lines"></div>
 
-<header class="hero">
-    <div class="grid"></div>
-    <div class="glow-xau">XAUUSD</div>
-    <h1 class="brand">TommyZeigt</h1>
-    <h2 class="subtitle">Performance Control Room</h2>
-    <p class="tagline">Dokumentierte Gold-Entscheidungen seit 06.02.2026</p>
-    <div class="buttons">
-        <a href="#dashboard" class="btn">Live Performance</a>
-        <a href="copytrading.html" class="btn-outline">Copytrading</a>
+<header class="terminal-header">
+    <div class="status-bar">
+        <span>MARKET: XAUUSD</span>
+        <span>STATUS: ACTIVE</span>
+        <span>SINCE: 06.02.2026</span>
     </div>
 </header>
 
-<section id="dashboard" class="section dark glass">
-    <h2>Performance Dashboard</h2>
+<section class="hero">
+    <h1 class="brand">TommyZeigt</h1>
+    <h2 class="subtitle">Private Trading Terminal</h2>
+    <p class="tagline">Dokumentierte Gold-Performance in Echtzeit</p>
+    <div class="buttons">
+        <a href="#dashboard" class="btn">Performance öffnen</a>
+        <a href="copytrading.html" class="btn-outline">Copytrading</a>
+    </div>
+</section>
+
+<section id="dashboard" class="dashboard-section">
+    <h2>LIVE PERFORMANCE</h2>
     <div class="dashboard">
-        <div class="card">
-            <span class="metric" data-target="128">0</span>
-            <p>Gesamtgewinn %</p>
+        <div class="panel">
+            <div class="label">Gesamtgewinn</div>
+            <div class="metric" data-target="128">0</div>
         </div>
-        <div class="card">
-            <span class="metric" data-target="74">0</span>
-            <p>Trefferquote %</p>
+        <div class="panel">
+            <div class="label">Trefferquote</div>
+            <div class="metric" data-target="74">0</div>
         </div>
-        <div class="card">
-            <span class="metric" data-target="2.3">0</span>
-            <p>Profit Faktor</p>
+        <div class="panel">
+            <div class="label">Profit Faktor</div>
+            <div class="metric" data-target="2.3">0</div>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <h2>Social Presence</h2>
-    <div class="social-icons">
-        <div class="icon">Instagram</div>
-        <div class="icon">TikTok</div>
-        <div class="icon">YouTube</div>
-    </div>
-</section>
-
-<footer>
-    <p>Keine Anlageberatung. Nur Dokumentation eigener Trades.</p>
+<footer class="terminal-footer">
+    Keine Anlageberatung. Nur Dokumentation eigener Trades.
 </footer>
 
 </body>
