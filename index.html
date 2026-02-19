@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TommyZeigt – Elite Interface</title>
+<title>TommyZeigt – Ultra Elite Interface</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#05070a;color:#eaeaea;overflow-x:hidden}
+
+body{
+background:#05070a;
+color:#eaeaea;
+overflow-x:hidden;
+}
 
 /* NAV */
 nav{
@@ -40,11 +45,25 @@ justify-content:center;
 position:relative;
 overflow:hidden;
 background:
-radial-gradient(circle at 80% 20%, rgba(212,175,55,0.07), transparent 60%),
-radial-gradient(circle at 20% 80%, rgba(212,175,55,0.05), transparent 60%),
+radial-gradient(circle at 80% 20%, rgba(212,175,55,0.05), transparent 60%),
+radial-gradient(circle at 20% 80%, rgba(212,175,55,0.04), transparent 60%),
 #05070a;
 }
 
+/* Grid Overlay */
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background-image:
+linear-gradient(rgba(212,175,55,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(212,175,55,0.03) 1px, transparent 1px);
+background-size:70px 70px;
+pointer-events:none;
+z-index:1;
+}
+
+/* Background Branding */
 .hero::before{
 content:"TommyZeigt";
 position:absolute;
@@ -56,14 +75,26 @@ left:50%;
 transform:translate(-50%,-50%);
 white-space:nowrap;
 pointer-events:none;
-color:rgba(212,175,55,0.08);
-animation: subtlePulse 12s ease-in-out infinite;
+color:rgba(212,175,55,0.06);
+animation: subtlePulse 16s ease-in-out infinite;
+z-index:0;
 }
 
 @keyframes subtlePulse {
 0% { opacity:0.7; transform:translate(-50%,-50%) scale(1); }
-50% { opacity:1; transform:translate(-50%,-50%) scale(1.02); }
+50% { opacity:1; transform:translate(-50%,-50%) scale(1.01); }
 100% { opacity:0.7; transform:translate(-50%,-50%) scale(1); }
+}
+
+/* Chart Wireframe */
+.chart-wireframe{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:50%;
+opacity:0.15;
+z-index:0;
 }
 
 .hero-content{
@@ -101,64 +132,17 @@ margin-top:20px;
 font-weight:300;
 }
 
-/* Overview Section */
-section{
-padding:180px 10%;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:60px;
-margin-top:100px;
-}
-
-.card{
-padding:60px 40px;
-background:#0b1016;
-border:1px solid rgba(212,175,55,0.12);
-transition:0.3s ease;
-}
-
-.card:hover{
-border-color:#d4af37;
-box-shadow:0 0 40px rgba(212,175,55,0.12);
-}
-
-.card h3{
-color:#d4af37;
-margin-bottom:20px;
-font-size:18px;
-letter-spacing:1px;
-}
-
-.card p{
-color:#aaa;
-font-size:14px;
-line-height:1.8;
-}
-
-/* Footer */
 footer{
 padding:70px 10%;
 background:#040507;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
+text-align:center;
 color:#666;
 font-size:13px;
 border-top:1px solid rgba(212,175,55,0.1);
 }
 
-footer a{
-color:#888;
-text-decoration:none;
-margin-right:25px;
-}
-
 @media(max-width:900px){
 .hero h1{font-size:42px}
-section{padding:140px 8%}
 .hero::before{font-size:28vw;}
 }
 </style>
@@ -171,10 +155,20 @@ section{padding:140px 8%}
 </nav>
 
 <section class="hero">
+
+<!-- SVG Wireframe Chart -->
+<svg class="chart-wireframe" viewBox="0 0 1200 400" preserveAspectRatio="none">
+<polyline 
+fill="none" 
+stroke="rgba(212,175,55,0.5)" 
+stroke-width="2"
+points="0,300 100,280 200,320 300,250 400,270 500,200 600,230 700,180 800,210 900,160 1000,190 1100,140 1200,170"/>
+</svg>
+
 <div class="hero-content">
 
 <h1>Willkommen</h1>
-<div class="hero-sub">Strukturierte Markt-Dokumentation</div>
+<div class="hero-sub">Ultra Elite Markt-Dokumentation</div>
 <div class="divider"></div>
 
 <p>
@@ -190,36 +184,8 @@ Es erfolgt keine Anlageberatung und keine Finanzdienstleistung.
 </div>
 </section>
 
-<section>
-<div class="grid">
-
-<div class="card">
-<h3>Fokus</h3>
-<p>Konzentrierte Marktbeobachtung im Bereich XAUUSD mit klarer Spezialisierung.</p>
-</div>
-
-<div class="card">
-<h3>Struktur</h3>
-<p>Eigene Risikostruktur innerhalb persönlicher Handelsaktivitäten.</p>
-</div>
-
-<div class="card">
-<h3>Transparenz</h3>
-<p>Dokumentation ohne Beratungscharakter oder Verkaufsabsicht.</p>
-</div>
-
-</div>
-</section>
-
 <footer>
-<div>
-<a href="impressum.html">Impressum</a>
-<a href="datenschutz.html">Datenschutz</a>
-<a href="risikohinweis.html">Risikohinweis</a>
-</div>
-<div>
 © 2026 TommyZeigt
-</div>
 </footer>
 
 </body>
