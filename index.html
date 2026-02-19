@@ -3,53 +3,57 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>TommyZeigt – Private Trading Terminal</title>
+<title>TommyZeigt – Hedge Fund Terminal</title>
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
 </head>
 <body>
 
-<div class="terminal-noise"></div>
-<div class="chart-lines"></div>
+<canvas id="bgChart"></canvas>
 
-<header class="terminal-header">
-    <div class="status-bar">
-        <span>MARKET: XAUUSD</span>
-        <span>STATUS: ACTIVE</span>
-        <span>SINCE: 06.02.2026</span>
-    </div>
+<header class="topbar">
+    <a href="https://tommyzeigt81.github.io/TommyZeigt/#start">START</a>
+    <a href="https://tommyzeigt81.github.io/TommyZeigt/#performance">PERFORMANCE</a>
+    <a href="https://tommyzeigt81.github.io/TommyZeigt/#copytrading">COPYTRADING</a>
+    <a href="https://tommyzeigt81.github.io/TommyZeigt/#kontakt">KONTAKT</a>
 </header>
 
 <section class="hero">
     <h1 class="brand">TommyZeigt</h1>
-    <h2 class="subtitle">Private Trading Terminal</h2>
-    <p class="tagline">Dokumentierte Gold-Performance in Echtzeit</p>
-    <div class="buttons">
-        <a href="#dashboard" class="btn">Performance öffnen</a>
-        <a href="copytrading.html" class="btn-outline">Copytrading</a>
+    <h2 class="subtitle">Hedge Fund Mode – XAUUSD</h2>
+    <div class="cta">
+        <a href="https://tommyzeigt81.github.io/TommyZeigt/#performance" class="btn">Live Performance</a>
+        <a href="https://tommyzeigt81.github.io/TommyZeigt/#copytrading" class="btn-outline">Copytrading</a>
     </div>
 </section>
 
-<section id="dashboard" class="dashboard-section">
-    <h2>LIVE PERFORMANCE</h2>
-    <div class="dashboard">
-        <div class="panel">
-            <div class="label">Gesamtgewinn</div>
-            <div class="metric" data-target="128">0</div>
-        </div>
-        <div class="panel">
-            <div class="label">Trefferquote</div>
-            <div class="metric" data-target="74">0</div>
-        </div>
-        <div class="panel">
-            <div class="label">Profit Faktor</div>
-            <div class="metric" data-target="2.3">0</div>
-        </div>
+<section class="dashboard">
+    <div class="widget">
+        <div class="label">Gesamtgewinn %</div>
+        <div class="metric" data-target="128">0</div>
+    </div>
+    <div class="widget">
+        <div class="label">Trefferquote %</div>
+        <div class="metric" data-target="74">0</div>
+    </div>
+    <div class="widget">
+        <div class="label">Profit Faktor</div>
+        <div class="metric" data-target="2.3">0</div>
     </div>
 </section>
 
-<footer class="terminal-footer">
-    Keine Anlageberatung. Nur Dokumentation eigener Trades.
+<section class="youtube">
+    <h2>Marktanalyse Videos</h2>
+    <iframe width="800" height="450"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<footer>
+Live Gold Preis Anzeige erfolgt über externes Broker-Widget.<br>
+Keine Anlageberatung. Nur Dokumentation eigener Trades.
 </footer>
 
 </body>

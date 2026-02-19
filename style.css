@@ -1,43 +1,28 @@
 
 body {
     margin: 0;
-    font-family: "Courier New", monospace;
-    background: #030303;
-    color: #00ff9c;
-    overflow-x: hidden;
+    font-family: 'Consolas', monospace;
+    background: #010101;
+    color: #e5e5e5;
 }
 
-.terminal-noise {
+canvas {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(rgba(0,255,156,0.02), transparent);
-    pointer-events: none;
-    z-index: -3;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.chart-lines {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: repeating-linear-gradient(
-        to right,
-        rgba(0,255,156,0.05),
-        rgba(0,255,156,0.05) 1px,
-        transparent 1px,
-        transparent 120px
-    );
-    z-index: -2;
-}
-
-.terminal-header {
-    padding: 10px 40px;
-    border-bottom: 1px solid rgba(0,255,156,0.2);
-}
-
-.status-bar {
+.topbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,215,0,0.2);
+}
+
+.topbar a {
+    text-decoration: none;
+    color: gold;
     font-size: 14px;
 }
 
@@ -48,64 +33,63 @@ body {
 
 .brand {
     font-size: 60px;
-    letter-spacing: 4px;
+    color: gold;
 }
 
 .subtitle {
-    font-size: 24px;
-    margin-top: 10px;
+    font-size: 22px;
+    opacity: 0.7;
 }
 
-.tagline {
-    margin-top: 20px;
-    opacity: 0.7;
+.cta {
+    margin-top: 40px;
 }
 
 .btn, .btn-outline {
     padding: 12px 30px;
-    margin: 15px;
+    margin: 10px;
+    border: 1px solid gold;
     text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #00ff9c;
-    color: #00ff9c;
+    color: gold;
 }
 
 .btn:hover {
-    background: #00ff9c;
-    color: #000;
-}
-
-.dashboard-section {
-    padding: 100px 20px;
-    text-align: center;
+    background: gold;
+    color: black;
 }
 
 .dashboard {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
+    gap: 60px;
+    padding: 100px 20px;
 }
 
-.panel {
-    border: 1px solid rgba(0,255,156,0.3);
+.widget {
+    border: 1px solid rgba(255,215,0,0.3);
     padding: 40px;
-    width: 250px;
+    width: 260px;
+    text-align: center;
 }
 
 .label {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.6;
 }
 
 .metric {
     font-size: 48px;
-    margin-top: 10px;
+    color: gold;
 }
 
-.terminal-footer {
+.youtube {
     text-align: center;
-    padding: 30px;
-    border-top: 1px solid rgba(0,255,156,0.2);
+    padding: 100px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid rgba(255,215,0,0.2);
     font-size: 12px;
 }
