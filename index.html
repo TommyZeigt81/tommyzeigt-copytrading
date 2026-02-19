@@ -3,57 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TommyZeigt – Start</title>
+<title>TommyZeigt – High-End Interface</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#05070a;color:#eaeaea;line-height:1.7}
-nav{position:fixed;width:100%;padding:25px 10%;display:flex;justify-content:space-between;
-background:rgba(5,7,10,0.9);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid rgba(212,175,55,0.15);}
-.logo{color:#d4af37;font-weight:800;letter-spacing:4px;font-size:18px;}
-nav a{color:#777;margin-left:30px;text-decoration:none;transition:0.3s;}
-nav a:hover{color:#d4af37;}
-section{padding:160px 10%;}
-h1,h2{color:#d4af37;letter-spacing:2px;}
-p{margin-top:20px;color:#b5b5b5;}
-.hero{height:100vh;display:flex;align-items:center;
-background:radial-gradient(circle at 80% 30%, rgba(212,175,55,0.08), transparent 60%),#05070a;}
-.footer{padding:60px 10%;background:#040507;display:flex;justify-content:space-between;
-flex-wrap:wrap;color:#666;font-size:13px;border-top:1px solid rgba(212,175,55,0.15);}
-.footer a{color:#888;text-decoration:none;margin-right:25px;}
-@media(max-width:900px){section{padding:120px 8%}}
+body{background:#06080c;color:#eaeaea;overflow-x:hidden}
+
+/* NAV */
+nav{
+position:fixed;
+width:100%;
+padding:25px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(6,8,12,0.85);
+backdrop-filter:blur(14px);
+z-index:1000;
+border-bottom:1px solid rgba(212,175,55,0.12);
+}
+.logo{
+color:#d4af37;
+font-weight:700;
+letter-spacing:4px;
+font-size:18px;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:0 10%;
+position:relative;
+overflow:hidden;
+background:#06080c;
+}
+
+/* Subtle Background Text */
+.hero::before{
+content:"XAUUSD";
+position:absolute;
+font-size:22vw;
+font-weight:800;
+letter-spacing:18px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+white-space:nowrap;
+pointer-events:none;
+color:rgba(212,175,55,0.05);
+animation: subtleFade 8s ease-in-out infinite;
+}
+
+/* Subtle Animation */
+@keyframes subtleFade {
+0% { opacity:0.7; }
+50% { opacity:1; }
+100% { opacity:0.7; }
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:750px;
+text-align:center;
+}
+
+.hero h1{
+font-size:64px;
+font-weight:700;
+letter-spacing:6px;
+color:#d4af37;
+}
+
+.hero-sub{
+font-size:18px;
+color:#9a9a9a;
+margin-top:18px;
+}
+
+.divider{
+width:100px;
+height:1px;
+background:#d4af37;
+margin:40px auto;
+opacity:0.6;
+}
+
+.hero p{
+color:#b5b5b5;
+line-height:1.8;
+margin-top:18px;
+font-weight:300;
+}
+
+/* FOOTER */
+footer{
+padding:50px 10%;
+text-align:center;
+color:#666;
+font-size:13px;
+border-top:1px solid rgba(212,175,55,0.1);
+background:#05070a;
+}
+
+@media(max-width:900px){
+.hero h1{font-size:38px}
+}
 </style>
 </head>
+
 <body>
 
 <nav>
 <div class="logo">TOMMYZEIGT</div>
-<div>
-<a href="index.html">Start</a>
-<a href="identitaet.html">Identität</a>
-<a href="philosophie.html">Philosophie</a>
-<a href="rechtliches.html">Einordnung</a>
-<a href="risiko.html">Risiko</a>
-</div>
 </nav>
 
-
 <section class="hero">
-<div>
-<h1>XAUUSD</h1>
-<p>High Focus Market Documentation</p>
-<p>TommyZeigt dokumentiert eigene Handelsaktivitäten mit Fokus auf Gold.</p>
-<p>Diese Plattform dient ausschließlich Informationszwecken.</p>
+<div class="hero-content">
+<h1>Willkommen</h1>
+<div class="hero-sub">Strukturierte Markt-Dokumentation</div>
+<div class="divider"></div>
+
+<p>
+TommyZeigt dokumentiert eigene Handelsaktivitäten mit Fokus auf XAUUSD.
+Transparenz, Struktur und Eigenverantwortung stehen im Mittelpunkt.
+</p>
+
+<p>
+Diese Plattform dient ausschließlich Informationszwecken.
+Es erfolgt keine Anlageberatung und keine Finanzdienstleistung.
+</p>
+
 </div>
 </section>
 
-
-<footer class="footer">
-<div>
-<a href="impressum.html">Impressum</a>
-<a href="datenschutz.html">Datenschutz</a>
-</div>
-<div>© 2026 TommyZeigt</div>
+<footer>
+© 2026 TommyZeigt
 </footer>
 
 </body>
