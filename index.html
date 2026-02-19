@@ -3,232 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TommyZeigt – Ultra Elite Dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
+<title>TommyZeigt | XAUUSD Copytrading</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 
-body{
-background:#05070a;
-color:#eaeaea;
-overflow-x:hidden;
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    background:#0a0a0a;
+    font-family:'Inter',sans-serif;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-/* NAV */
-nav{
-position:fixed;
-width:100%;
-padding:28px 10%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(5,7,10,0.85);
-backdrop-filter:blur(14px);
-z-index:1000;
-border-bottom:1px solid rgba(212,175,55,0.12);
+.background-grid {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(rgba(255,215,0,0.05) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,215,0,0.05) 1px, transparent 1px);
+    background-size:50px 50px;
+    z-index:-1;
 }
 
-.logo{
-color:#d4af37;
-font-weight:700;
-letter-spacing:5px;
-font-size:18px;
+header {
+    padding:40px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-overflow:hidden;
-background:
-radial-gradient(circle at 80% 20%, rgba(212,175,55,0.05), transparent 60%),
-radial-gradient(circle at 20% 80%, rgba(212,175,55,0.04), transparent 60%),
-#05070a;
+.logo {
+    font-family:'Orbitron',sans-serif;
+    font-size:28px;
+    letter-spacing:2px;
+    color:gold;
 }
 
-.hero::before{
-content:"TommyZeigt";
-position:absolute;
-font-size:18vw;
-font-weight:800;
-letter-spacing:12px;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-white-space:nowrap;
-pointer-events:none;
-color:rgba(212,175,55,0.06);
-animation: subtlePulse 16s ease-in-out infinite;
-z-index:0;
+nav a {
+    margin-left:40px;
+    text-decoration:none;
+    color:#aaa;
+    transition:0.3s;
 }
 
-@keyframes subtlePulse {
-0% { opacity:0.7; transform:translate(-50%,-50%) scale(1); }
-50% { opacity:1; transform:translate(-50%,-50%) scale(1.01); }
-100% { opacity:0.7; transform:translate(-50%,-50%) scale(1); }
+nav a:hover { color:gold; }
+
+.hero {
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:750px;
-text-align:center;
+.hero h1 {
+    font-family:'Orbitron',sans-serif;
+    font-size:90px;
+    letter-spacing:6px;
+    color:rgba(255,215,0,0.15);
+    animation:pulse 4s infinite;
 }
 
-.hero h1{
-font-size:72px;
-font-weight:700;
-letter-spacing:6px;
-color:#d4af37;
+@keyframes pulse {
+    0% { opacity:0.15; }
+    50% { opacity:0.35; }
+    100% { opacity:0.15; }
 }
 
-.hero-sub{
-font-size:18px;
-color:#9a9a9a;
-margin-top:25px;
+.hero-content { position:absolute; }
+
+.hero-content h2 {
+    font-size:42px;
+    margin-bottom:20px;
 }
 
-.divider{
-width:80px;
-height:1px;
-background:#d4af37;
-margin:45px auto;
-opacity:0.6;
+.hero-content p {
+    font-size:18px;
+    color:#ccc;
+    margin-bottom:30px;
 }
 
-.hero p{
-color:#b5b5b5;
-line-height:1.9;
-margin-top:20px;
-font-weight:300;
+.button {
+    padding:15px 40px;
+    border:1px solid gold;
+    color:gold;
+    text-decoration:none;
+    transition:0.3s;
 }
 
-/* DASHBOARD SECTION */
-.dashboard{
-padding:180px 10%;
-background:#0a0e14;
+.button:hover {
+    background:gold;
+    color:#000;
 }
 
-.dashboard h2{
-color:#d4af37;
-font-size:36px;
-letter-spacing:2px;
-text-align:center;
+.section { padding:120px 80px; }
+
+.section h3 {
+    font-size:32px;
+    margin-bottom:40px;
+    color:gold;
 }
 
-.metrics{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:50px;
-margin-top:100px;
+.performance-grid {
+    display:flex;
+    gap:40px;
 }
 
-.metric-card{
-background:#0b1016;
-padding:60px 40px;
-border:1px solid rgba(212,175,55,0.12);
-text-align:center;
-transition:0.3s ease;
+.performance-box {
+    flex:1;
+    background:#111;
+    padding:40px;
+    border:1px solid rgba(255,215,0,0.2);
 }
 
-.metric-card:hover{
-border-color:#d4af37;
-box-shadow:0 0 40px rgba(212,175,55,0.12);
+.performance-box h4 {
+    font-size:24px;
+    margin-bottom:15px;
 }
 
-.metric-value{
-font-size:38px;
-color:#d4af37;
-margin-bottom:15px;
-font-weight:600;
+.footer {
+    padding:60px 80px;
+    border-top:1px solid rgba(255,215,0,0.1);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.metric-label{
-font-size:14px;
-color:#aaa;
-letter-spacing:1px;
+.social-icons a {
+    margin-right:20px;
+    color:gold;
+    font-size:18px;
+    text-decoration:none;
 }
 
-/* FOOTER */
-footer{
-padding:70px 10%;
-background:#040507;
-text-align:center;
-color:#666;
-font-size:13px;
-border-top:1px solid rgba(212,175,55,0.1);
-}
-
-@media(max-width:900px){
-.hero h1{font-size:42px}
-.hero::before{font-size:28vw;}
-.dashboard{padding:140px 8%;}
-}
 </style>
 </head>
-
 <body>
 
+<div class="background-grid"></div>
+
+<header>
+<div class="logo">TommyZeigt</div>
 <nav>
-<div class="logo">TOMMYZEIGT</div>
+<a href="#about">Überblick</a>
+<a href="#performance">Performance</a>
+<a href="#kontakt">Kontakt</a>
 </nav>
+</header>
 
 <section class="hero">
+<h1>XAUUSD</h1>
 <div class="hero-content">
-
-<h1>Willkommen</h1>
-<div class="hero-sub">Ultra Elite Markt-Dokumentation</div>
-<div class="divider"></div>
-
-<p>
-TommyZeigt dokumentiert eigene Handelsaktivitäten mit Fokus auf XAUUSD.
-Transparenz, Disziplin und Eigenverantwortung stehen im Mittelpunkt.
-</p>
-
-<p>
-Diese Plattform dient ausschließlich Informationszwecken.
-Es erfolgt keine Anlageberatung und keine Finanzdienstleistung.
-</p>
-
+<h2>Modernes Copytrading für Gold</h2>
+<p>Transparente Performance • Klare Struktur • Fokus auf XAUUSD</p>
+<a href="#performance" class="button">Performance ansehen</a>
 </div>
 </section>
 
-<section class="dashboard">
-
-<h2>Performance Übersicht</h2>
-
-<div class="metrics">
-
-<div class="metric-card">
-<div class="metric-value">-- %</div>
-<div class="metric-label">Gesamtentwicklung</div>
-</div>
-
-<div class="metric-card">
-<div class="metric-value">--</div>
-<div class="metric-label">Trefferquote</div>
-</div>
-
-<div class="metric-card">
-<div class="metric-value">--</div>
-<div class="metric-label">Profit Faktor</div>
-</div>
-
-<div class="metric-card">
-<div class="metric-value">--</div>
-<div class="metric-label">Handelstage</div>
-</div>
-
-</div>
-
+<section class="section" id="about">
+<h3>Was ist Copytrading?</h3>
+<p>
+Copytrading ermöglicht es, Handelsentscheidungen automatisiert zu spiegeln.
+Der Fokus liegt hier ausschließlich auf XAUUSD (Gold) und einer klar dokumentierten Handelsstruktur.
+</p>
 </section>
 
-<footer>
-© 2026 TommyZeigt
+<section class="section" id="performance">
+<h3>Performance Überblick</h3>
+<div class="performance-grid">
+<div class="performance-box">
+<h4>Gesamtentwicklung</h4>
+<p>Start: 06.02.2026<br>Wachstumskurve wird hier integriert.</p>
+</div>
+<div class="performance-box">
+<h4>Trefferquote</h4>
+<p>Durchschnittliche Performance-Metriken können hier dargestellt werden.</p>
+</div>
+<div class="performance-box">
+<h4>Transparenz</h4>
+<p>Wöchentliche Updates zur Entwicklung des Accounts.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="kontakt">
+<h3>Kontakt & Community</h3>
+<p>Folge den Kanälen für Updates und Einblicke.</p>
+</section>
+
+<footer class="footer">
+<div>© 2026 TommyZeigt</div>
+<div class="social-icons">
+<a href="#">Instagram</a>
+<a href="#">TikTok</a>
+<a href="#">YouTube</a>
+</div>
 </footer>
 
 </body>
