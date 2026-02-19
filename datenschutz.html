@@ -2,13 +2,57 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Datenschutz</title>
-<style>body{font-family:Arial;background:#0b0d10;color:#eaeaea;padding:100px}</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#05070a;color:#eaeaea;line-height:1.7}
+nav{position:fixed;width:100%;padding:25px 10%;display:flex;justify-content:space-between;
+background:rgba(5,7,10,0.9);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid rgba(212,175,55,0.15);}
+.logo{color:#d4af37;font-weight:800;letter-spacing:4px;font-size:18px;}
+nav a{color:#777;margin-left:30px;text-decoration:none;transition:0.3s;}
+nav a:hover{color:#d4af37;}
+section{padding:160px 10%;}
+h1,h2{color:#d4af37;letter-spacing:2px;}
+p{margin-top:20px;color:#b5b5b5;}
+.hero{height:100vh;display:flex;align-items:center;
+background:radial-gradient(circle at 80% 30%, rgba(212,175,55,0.08), transparent 60%),#05070a;}
+.footer{padding:60px 10%;background:#040507;display:flex;justify-content:space-between;
+flex-wrap:wrap;color:#666;font-size:13px;border-top:1px solid rgba(212,175,55,0.15);}
+.footer a{color:#888;text-decoration:none;margin-right:25px;}
+@media(max-width:900px){section{padding:120px 8%}}
+</style>
 </head>
 <body>
-<h1>Datenschutzerklärung</h1>
-<p>Personenbezogene Daten werden entsprechend der DSGVO verarbeitet.</p>
-<p>Beim Aufruf der Website werden Server-Log-Daten erfasst (IP, Browser, Zeit).</p>
+
+<nav>
+<div class="logo">TOMMYZEIGT</div>
+<div>
+<a href="index.html">Start</a>
+<a href="identitaet.html">Identität</a>
+<a href="philosophie.html">Philosophie</a>
+<a href="rechtliches.html">Einordnung</a>
+<a href="risiko.html">Risiko</a>
+</div>
+</nav>
+
+
+<section>
+<h2>Datenschutzerklärung</h2>
+<p>Personenbezogene Daten werden gemäß DSGVO verarbeitet.</p>
+<p>Beim Aufruf der Website werden Server-Log-Daten erfasst.</p>
 <p>Kontaktaufnahme erfolgt freiwillig per E-Mail.</p>
+</section>
+
+
+<footer class="footer">
+<div>
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+</div>
+<div>© 2026 TommyZeigt</div>
+</footer>
+
 </body>
 </html>
