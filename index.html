@@ -4,145 +4,191 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TommyZeigt | XAUUSD Copytrading</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-    background:#0a0a0a;
-    font-family:'Inter',sans-serif;
-    color:#fff;
-    overflow-x:hidden;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:#050505;
+font-family:'Inter',sans-serif;
+color:#fff;
+overflow-x:hidden;
 }
 
-.background-grid {
-    position:fixed;
-    width:100%;
-    height:100%;
-    background-image:linear-gradient(rgba(255,215,0,0.05) 1px, transparent 1px),
-                     linear-gradient(90deg, rgba(255,215,0,0.05) 1px, transparent 1px);
-    background-size:50px 50px;
-    z-index:-1;
+/* GRID BACKGROUND */
+.grid-bg{
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+linear-gradient(rgba(255,215,0,0.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,215,0,0.04) 1px, transparent 1px);
+background-size:60px 60px;
+z-index:-2;
 }
 
-header {
-    padding:40px 80px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* GLOW ORB */
+.glow{
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle, rgba(255,215,0,0.15) 0%, transparent 70%);
+top:20%;
+left:50%;
+transform:translateX(-50%);
+filter:blur(120px);
+z-index:-1;
 }
 
-.logo {
-    font-family:'Orbitron',sans-serif;
-    font-size:28px;
-    letter-spacing:2px;
-    color:gold;
+/* HEADER */
+header{
+padding:40px 100px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-nav a {
-    margin-left:40px;
-    text-decoration:none;
-    color:#aaa;
-    transition:0.3s;
+.logo{
+font-family:'Orbitron',sans-serif;
+font-size:28px;
+letter-spacing:3px;
+color:gold;
 }
 
-nav a:hover { color:gold; }
-
-.hero {
-    height:90vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    position:relative;
+nav a{
+margin-left:40px;
+text-decoration:none;
+color:#aaa;
+transition:0.3s;
+font-weight:500;
 }
 
-.hero h1 {
-    font-family:'Orbitron',sans-serif;
-    font-size:90px;
-    letter-spacing:6px;
-    color:rgba(255,215,0,0.15);
-    animation:pulse 4s infinite;
+nav a:hover{color:gold}
+
+/* HERO */
+.hero{
+height:95vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
 }
 
-@keyframes pulse {
-    0% { opacity:0.15; }
-    50% { opacity:0.35; }
-    100% { opacity:0.15; }
+.hero h1{
+font-family:'Orbitron',sans-serif;
+font-size:120px;
+letter-spacing:8px;
+color:rgba(255,215,0,0.08);
+animation:pulse 5s infinite;
 }
 
-.hero-content { position:absolute; }
-
-.hero-content h2 {
-    font-size:42px;
-    margin-bottom:20px;
+@keyframes pulse{
+0%{opacity:0.08}
+50%{opacity:0.25}
+100%{opacity:0.08}
 }
 
-.hero-content p {
-    font-size:18px;
-    color:#ccc;
-    margin-bottom:30px;
+.hero-content{
+position:absolute;
+max-width:900px;
 }
 
-.button {
-    padding:15px 40px;
-    border:1px solid gold;
-    color:gold;
-    text-decoration:none;
-    transition:0.3s;
+.hero-content h2{
+font-size:48px;
+margin-bottom:25px;
+font-weight:600;
 }
 
-.button:hover {
-    background:gold;
-    color:#000;
+.hero-content p{
+font-size:20px;
+color:#ccc;
+margin-bottom:40px;
 }
 
-.section { padding:120px 80px; }
-
-.section h3 {
-    font-size:32px;
-    margin-bottom:40px;
-    color:gold;
+.btn{
+padding:16px 45px;
+border:1px solid gold;
+color:gold;
+text-decoration:none;
+transition:0.3s;
+font-weight:600;
 }
 
-.performance-grid {
-    display:flex;
-    gap:40px;
+.btn:hover{
+background:gold;
+color:#000;
 }
 
-.performance-box {
-    flex:1;
-    background:#111;
-    padding:40px;
-    border:1px solid rgba(255,215,0,0.2);
+/* SECTIONS */
+.section{
+padding:140px 100px;
 }
 
-.performance-box h4 {
-    font-size:24px;
-    margin-bottom:15px;
+.section h3{
+font-size:36px;
+margin-bottom:60px;
+color:gold;
+font-family:'Orbitron',sans-serif;
 }
 
-.footer {
-    padding:60px 80px;
-    border-top:1px solid rgba(255,215,0,0.1);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.cards{
+display:flex;
+gap:40px;
 }
 
-.social-icons a {
-    margin-right:20px;
-    color:gold;
-    font-size:18px;
-    text-decoration:none;
+.card{
+flex:1;
+background:#0f0f0f;
+padding:50px;
+border:1px solid rgba(255,215,0,0.15);
+transition:0.4s;
 }
+
+.card:hover{
+transform:translateY(-10px);
+border:1px solid gold;
+}
+
+.card h4{
+font-size:24px;
+margin-bottom:20px;
+}
+
+/* PERFORMANCE COUNTERS */
+.counter{
+font-size:42px;
+color:gold;
+margin-bottom:10px;
+font-family:'Orbitron',sans-serif;
+}
+
+/* FOOTER */
+footer{
+padding:80px 100px;
+border-top:1px solid rgba(255,215,0,0.1);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.social a{
+margin-right:25px;
+color:gold;
+text-decoration:none;
+font-weight:500;
+}
+
+.social a:hover{opacity:0.7}
 
 </style>
 </head>
+
 <body>
 
-<div class="background-grid"></div>
+<div class="grid-bg"></div>
+<div class="glow"></div>
 
 <header>
 <div class="logo">TommyZeigt</div>
@@ -156,51 +202,82 @@ nav a:hover { color:gold; }
 <section class="hero">
 <h1>XAUUSD</h1>
 <div class="hero-content">
-<h2>Modernes Copytrading für Gold</h2>
-<p>Transparente Performance • Klare Struktur • Fokus auf XAUUSD</p>
-<a href="#performance" class="button">Performance ansehen</a>
+<h2>High-Tech Copytrading Fokus auf Gold</h2>
+<p>Transparente Entwicklung · Klare Struktur · Dokumentierte Performance</p>
+<a href="#performance" class="btn">Performance ansehen</a>
 </div>
 </section>
 
 <section class="section" id="about">
-<h3>Was ist Copytrading?</h3>
-<p>
-Copytrading ermöglicht es, Handelsentscheidungen automatisiert zu spiegeln.
-Der Fokus liegt hier ausschließlich auf XAUUSD (Gold) und einer klar dokumentierten Handelsstruktur.
-</p>
+<h3>Struktur & Konzept</h3>
+<div class="cards">
+<div class="card">
+<h4>Fokus Markt</h4>
+<p>Handel ausschließlich auf XAUUSD mit klar definierten Handelszonen und Risikostruktur.</p>
+</div>
+<div class="card">
+<h4>Transparenz</h4>
+<p>Wöchentliche Updates zur Performanceentwicklung und nachvollziehbare Dokumentation.</p>
+</div>
+<div class="card">
+<h4>Automatisierte Spiegelung</h4>
+<p>Copytrading ermöglicht die technische Übertragung von Handelsentscheidungen.</p>
+</div>
+</div>
 </section>
 
 <section class="section" id="performance">
-<h3>Performance Überblick</h3>
-<div class="performance-grid">
-<div class="performance-box">
-<h4>Gesamtentwicklung</h4>
-<p>Start: 06.02.2026<br>Wachstumskurve wird hier integriert.</p>
+<h3>Performance Dashboard</h3>
+<div class="cards">
+<div class="card">
+<div class="counter" id="growth">0%</div>
+<p>Gesamtentwicklung seit Start</p>
 </div>
-<div class="performance-box">
-<h4>Trefferquote</h4>
-<p>Durchschnittliche Performance-Metriken können hier dargestellt werden.</p>
+<div class="card">
+<div class="counter" id="winrate">0%</div>
+<p>Trefferquote</p>
 </div>
-<div class="performance-box">
-<h4>Transparenz</h4>
-<p>Wöchentliche Updates zur Entwicklung des Accounts.</p>
+<div class="card">
+<div class="counter" id="profitfactor">0.0</div>
+<p>Profit Faktor</p>
 </div>
 </div>
 </section>
 
 <section class="section" id="kontakt">
-<h3>Kontakt & Community</h3>
-<p>Folge den Kanälen für Updates und Einblicke.</p>
+<h3>Community & Social</h3>
+<p>Folge den Kanälen für Einblicke und Updates.</p>
 </section>
 
-<footer class="footer">
+<footer>
 <div>© 2026 TommyZeigt</div>
-<div class="social-icons">
+<div class="social">
 <a href="#">Instagram</a>
 <a href="#">TikTok</a>
 <a href="#">YouTube</a>
 </div>
 </footer>
+
+<script>
+function animateValue(id,start,end,duration){
+let range=end-start;
+let current=start;
+let increment=end>start?1:-1;
+let stepTime=Math.abs(Math.floor(duration/range));
+let obj=document.getElementById(id);
+let timer=setInterval(function(){
+current+=increment;
+obj.innerHTML=current+(id==="profitfactor"?"": "%");
+if(current==end){clearInterval(timer);}
+},stepTime);
+}
+
+window.onload=function(){
+animateValue("growth",0,42,2000);
+animateValue("winrate",0,78,2000);
+animateValue("profitfactor",0,18,2000);
+}
+</script>
 
 </body>
 </html>
