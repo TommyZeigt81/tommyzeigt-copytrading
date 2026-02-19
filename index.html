@@ -3,66 +3,50 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>TommyZeigt – XAUUSD Control Room</title>
+<title>TommyZeigt – Performance Control Room</title>
 <link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
 </head>
 <body>
+
+<div class="background-wireframe"></div>
 
 <header class="hero">
     <div class="grid"></div>
     <div class="glow-xau">XAUUSD</div>
     <h1 class="brand">TommyZeigt</h1>
-    <h2 class="subtitle">XAUUSD Copytrading</h2>
-    <p class="tagline">Transparente Performance. Reines Gold. Dokumentierte Entscheidungen.</p>
+    <h2 class="subtitle">Performance Control Room</h2>
+    <p class="tagline">Dokumentierte Gold-Entscheidungen seit 06.02.2026</p>
     <div class="buttons">
-        <a href="performance.html" class="btn">Performance ansehen</a>
-        <a href="copytrading.html" class="btn-outline">Copytrading verstehen</a>
+        <a href="#dashboard" class="btn">Live Performance</a>
+        <a href="copytrading.html" class="btn-outline">Copytrading</a>
     </div>
 </header>
 
-<section class="section dark">
+<section id="dashboard" class="section dark glass">
     <h2>Performance Dashboard</h2>
     <div class="dashboard">
         <div class="card">
-            <span class="metric">+XX%</span>
-            <p>Gesamtgewinn seit 06.02.2026</p>
+            <span class="metric" data-target="128">0</span>
+            <p>Gesamtgewinn %</p>
         </div>
         <div class="card">
-            <span class="metric">XX%</span>
-            <p>Trefferquote</p>
+            <span class="metric" data-target="74">0</span>
+            <p>Trefferquote %</p>
         </div>
         <div class="card">
-            <span class="metric">X.X</span>
+            <span class="metric" data-target="2.3">0</span>
             <p>Profit Faktor</p>
         </div>
     </div>
 </section>
 
 <section class="section">
-    <h2>Folge dem Projekt</h2>
+    <h2>Social Presence</h2>
     <div class="social-icons">
-
-        <a href="#" class="icon">
-            <!-- Instagram SVG -->
-            <svg viewBox="0 0 24 24">
-                <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 4.8A5.2 5.2 0 1 1 6.8 12 5.2 5.2 0 0 1 12 6.8zm0 8.6A3.4 3.4 0 1 0 8.6 12 3.4 3.4 0 0 0 12 15.4zm4.8-8.9a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2z"/>
-            </svg>
-        </a>
-
-        <a href="#" class="icon">
-            <!-- TikTok SVG -->
-            <svg viewBox="0 0 24 24">
-                <path d="M16 2h3a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.7V17a7 7 0 1 1-7-7 7 7 0 0 1 1 .07v3.06a4 4 0 1 0 3 3.87V2z"/>
-            </svg>
-        </a>
-
-        <a href="#" class="icon">
-            <!-- YouTube SVG -->
-            <svg viewBox="0 0 24 24">
-                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.8 15.5v-7l6 3.5-6 3.5z"/>
-            </svg>
-        </a>
-
+        <div class="icon">Instagram</div>
+        <div class="icon">TikTok</div>
+        <div class="icon">YouTube</div>
     </div>
 </section>
 
